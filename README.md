@@ -18,7 +18,7 @@ To Commit Changes Locally
 
 2. Add files to commit.. $git add .
 
-3. Commit changes to local directory with the following structure.. $git commit -m 'finished:<insert-text-here>'
+3. Commit changes to local directory with the following structure.. $git commit -m 'finished: insert-text-here'
 
 To Commit Changes To Github
 
