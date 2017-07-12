@@ -3,28 +3,23 @@ const express = require('express'),
       app = express(),
       bodyParser = require('body-parser'),
       massive = require('massive'),
-      controller = require('./controllersNode/controller1'),
+      controller = require('../server/controllersNode/controller1'),
       cors = require('cors'),
       axios = require('axios'),
       port = 3007;
+      config = require('../.config.js')
 
 
 ////// MIDDLEWARE //////
 app.use(bodyParser.json());
-app.use(express.static('public'));
+app.use(express.static('../public'));
 app.use(cors());
 
 
-////// DB CONNECT //////
-    // massive({
-    //   host: 'localhost',
-    //   port: 5432,
-    //   database: 'wfc',
-    //   user: 'postgres',
-    //   password: 'wfc'
-    // }).then(function(db){
-    //   app.set('db', db)
-    // })
+////// DATABASE //////
+massive(config.database).then(db => {
+  app.set('db', db)
+})
 
 
 ////// ENDPOINTS //////
