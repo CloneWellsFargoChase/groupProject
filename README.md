@@ -1,6 +1,6 @@
 # groupProject
 
-********To Start Working On the Project******
+To Start Working On the Project
 
 1. Fork/Clone to your local drive/machine.. $git clone https://github.com/CloneWellsFargoChase/groupProject.git
 
@@ -12,14 +12,16 @@
 
 5. Please REBASE before the creation of a new branch!!!.. $git pull master
 
-********To Commit Changes Locally********
+To Commit Changes Locally
+
 1. Run git status to check for local changes.. $git status 
 
 2. Add files to commit.. $git add .
 
 3. Commit changes to local directory with the following structure.. $git commit -m 'finished:<insert-text-here>'
 
-********To Commit Changes To Github********
+To Commit Changes To Github
+
 1. Run git remote -v to determine upstream name. Validate for exact match to the name and path below.. $git remote -v
 //origin  https://github.com/CloneWellsFargoChase/groupProject.git (fetch)
 //origin  https://github.com/CloneWellsFargoChase/groupProject.git (push)
@@ -30,4 +32,5 @@
 
 4. Delete your local branch and REBASE once merge has been approved.
 
-
+Bugs/Defects/Errors
+-- Please raise any issues/concerns/bugs in the issues tab --
