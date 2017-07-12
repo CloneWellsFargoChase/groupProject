@@ -10,7 +10,7 @@ To Start Working On the Project
 
 4. Run 'npm start' to view in browser.. $npm start
 
-5. REBASE often!!!.. $git pull master
+5. REBASE often!!!.. $git pull
 
 To Commit Changes Locally
 
@@ -33,6 +33,16 @@ To Commit Changes To Github
 3. Merge request to be approved by approver(Dallin).
 
 4. Delete your local branch and REBASE once merge has been approved.
+
+Rebasing
+
+1. Checkout to local master branch.. $git checkout master
+
+2. Rebase with remote master.. $git pull
+
+3. Switch to local branch.. $git checkout branch-name
+
+4. Merge local branch with master.. $git merge master
 
 Bugs/Defects/Errors
 -- Please raise any issues/concerns/bugs in the issues tab --
