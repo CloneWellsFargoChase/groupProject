@@ -10,7 +10,7 @@ To Start Working On the Project
 
 4. Run 'npm start' to view in browser.. $npm start
 
-5. Please REBASE before the creation of a new branch!!!.. $git pull master
+5. REBASE often!!!.. $git pull master
 
 To Commit Changes Locally
 
