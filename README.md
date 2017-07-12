@@ -23,8 +23,8 @@ To Commit Changes Locally
 To Commit Changes To Github
 
 1. Run git remote -v to determine upstream name. Validate for exact match to the name and path below.. $git remote -v
-//origin  https://github.com/CloneWellsFargoChase/groupProject.git (fetch)
-//origin  https://github.com/CloneWellsFargoChase/groupProject.git (push)
+ origin  https://github.com/CloneWellsFargoChase/groupProject.git (fetch)
+ origin  https://github.com/CloneWellsFargoChase/groupProject.git (push)
 
 2. Run git push origin <your-branch-name>.. $git push origin test-branch
 
