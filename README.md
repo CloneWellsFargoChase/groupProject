@@ -1,5 +1,30 @@
 # groupProject
 
+ GITHUB FLOW
+
+1. From Master: Git Pull (this will bring in the latest code down)
+2. git checkout -b name the branch 
+
+——————— once finished with feature ————————— 
+3. commit everything (git add/commit)
+4. git checkout master 
+5. git pull —> this checks whether master has been changed since create branch. 
+6. git checkout <feature branch> 
+7. git merge master 
+8. git push origin <feature branch> -u
+9. open pull request (tell mentor I've open pull request)
+
+git branch -d <feature branch> 
+
+——— fix merge conflict ———— 
+<<<<HEAD
+
+this is will be my code 
+
+>>>> master 
+
+this is there other coders 
+
 To Start Working On the Project
 
 1. Fork/Clone to your local drive/machine.. $git clone https://github.com/CloneWellsFargoChase/groupProject.git
