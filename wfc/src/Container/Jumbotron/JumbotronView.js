@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import UserLoginContainer from './LoginComponent';
-import {Button} from 'react-bootstrap';
-import './Jumbotron.css';
+import {Link} from 'react-router-dom';
 
+import './Jumbotron.css';
 
 
 class Jumbotron extends Component {
@@ -12,6 +12,8 @@ class Jumbotron extends Component {
             <div className="jumbo-container">
                 <div className="login-box">
                     <UserLoginContainer />
+                    <p>Forgot username/password?</p>
+                    <p>Not entrolled?<Link to="/signup">Sign up now</Link></p>
                 </div>
             </div>
         );

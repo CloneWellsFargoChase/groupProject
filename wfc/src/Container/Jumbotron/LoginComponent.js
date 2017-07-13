@@ -49,7 +49,7 @@ class LoginField extends Component{
             onChange={this.handlePasswordChange}
           />
           <br />
-          <RaisedButton type="submit" label="Primary" primary={true}/>
+          <RaisedButton type="submit" label="Login" primary={true} className="login-button"/>
         </form>
       </div>
       );
