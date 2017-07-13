@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import Jumbotron from '../Container/Jumbotron/JumbotronView';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
 
 class Home extends Component {
     render() {
         return (
+        <MuiThemeProvider>
             <div>
                 <div>
                    { /*header goes here*/}  
@@ -15,6 +20,7 @@ class Home extends Component {
                     { /*slider goes here*/}
                 </div>
             </div>
+        </MuiThemeProvider>
         );
     }
 }
