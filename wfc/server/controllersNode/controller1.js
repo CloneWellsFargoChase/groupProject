@@ -60,7 +60,7 @@ newUser: function(req, res, next){
 
 // login
 login: function(req, res){
-
+  console.log(req.body);
   if(req.body.userName){
     req.app.get('db').loginU([
         req.body.userName,
