@@ -8,7 +8,6 @@ const LoginField = () => (
       <TextField
           hintText="Username/Email"
           floatingLabelText="Username/Email"
-          type="password"
         /><br />
       <TextField
         hintText="Password Field"

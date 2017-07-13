@@ -8,7 +8,7 @@ injectTapEventPlugin();
 class Jumbotron extends Component {
     render() {
         return (
-            <div className="login-container">
+            <div className="jumbo-container">
                 <div className="login-box">
                     <LoginField/>
                 </div>
