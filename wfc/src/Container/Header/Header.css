@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid black;
+  font-family: Open sans
+}
+
+.App {
+  text-align: center;
+}
+
+
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}*/
+
+.header {
+  /*overflow: hidden;*/
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  padding: 20px;
+  color: blue;
+  height: 0.4em;
+  font-size: 0.5em;
+}
+
+.header-text {
+  color: #fff;
+  font-size: 1.125em;
+  text-shadow: 0.5px 0.5px 5px #000;
+  width: 66em;
+  margin: -15px auto;
+  display: flex;
+  justify-content: space-between;
+  ;
+}
+
+.hamburger-bars {
+  width: 1.2em;
+}
+
+.menu-dropdown {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width: 15em;
+  height: 1.3em
+}
+
+.menu-dropdown-arrow {
+  width: 0.8em;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
