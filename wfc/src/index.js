@@ -7,6 +7,8 @@ import configureStore from './Store/Store';
 
 
 //place all css below this line
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import './index.css';
 
 
