@@ -9,11 +9,14 @@
     "cors": "^2.8.3",
     "express": "^4.15.3",
     "massive": "^3.0.0-rc1",
+    "material-ui": "^0.18.6",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
     "react-scripts": "1.0.10",
+    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.7.1"
   },
   "scripts": {
