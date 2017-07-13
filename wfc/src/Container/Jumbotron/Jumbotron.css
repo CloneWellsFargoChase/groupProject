@@ -1,0 +1,15 @@
+.jumbo-container{
+    width:100%;
+    height:25rem;
+}
+
+.login-box{
+    padding-left:20px;
+    width:30rem;
+    height:25rem;
+    background-color:rgba(48, 0, 0, 0.5);
+}
+
+.login-button{
+    margin-bottom: 10px;
+}
