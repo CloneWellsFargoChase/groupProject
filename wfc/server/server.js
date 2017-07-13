@@ -6,14 +6,23 @@ const express = require('express'),
       controller = require('./controllersNode/controller1'),
       cors = require('cors'),
       axios = require('axios'),
-      port = 3007;
-      config = require('../.config.js')
+      port = 3007,
+      config = require('../.config.js'),
+      { checkIfUserExists,
+        newUser,
+        login,
+        transactions,
+        xfer,
+        tsearch,
+        forgot
+      } = require('./controllersNode/controller1')
 
 
 ////// MIDDLEWARE //////
 app.use(bodyParser.json());
 app.use(express.static('../public'));
 app.use(cors());
+
 app.set('trust_proxy', 1); //remove if we dont set up NGINX
 
 
@@ -28,28 +37,28 @@ massive(config.database).then(db => {
 
 // done
 // pass in fName, lName, userName, password, email
-app.post('/newUser', controller.checkIfUserExists, controller.newUser, controller.login)
+app.post('/newUser', checkIfUserExists, newUser, login)
 
 
 // done
 // pass in password & username or email
-app.post('/login', controller.login)
+app.post('/login', login)
 
 
 // pass in from username and to username & email
-app.get('/transactions', controller.transactions)
+app.get('/transactions', transactions)
 
 
 // pass in userName and email for target acct
-app.get('/xfer', controller.checkIfUserExists, controller.xfer)
+app.get('/xfer', checkIfUserExists, xfer)
 
 
 // pass in searchValue
-app.get('/transactions/:val', controller.tsearch)
+app.get('/transactions/:val', tsearch)
 
 
 // pass in
-app.get('/forgot', controller.forgot)
+app.get('/forgot', forgot)
 
 
 ////// LISTENING //////
