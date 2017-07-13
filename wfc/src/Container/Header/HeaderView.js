@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import hamburger from './hamburger.svg';
-import arrow from './down-arrow.svg';
+import hamburger from '../../Images/Icons/hamburger.svg';
+import arrow from '../../Images/Icons/down-arrow.svg';
 import './Header.css';
 
 class Header extends Component {
