@@ -1,5 +1,6 @@
 ////// REQUIRED //////
-const axios = require('axios');
+const axios = require('axios'),
+      moment =  require('moment');
 
 
 ////// EXPORTS //////
@@ -31,10 +32,28 @@ newUser: function(req, res, next){
 
     let accountNumber = Math.floor(Math.random() * 900000) + 100000;
     let startBal = 500;
+    console.log(
+      'userName', req.body.userName,
+      'password', req.body.password,
+      'email', req.body.email
+    );
 
-//check to make sure random number is not already present in db
-//check firstname, lname, userName, password, email characteristics
-  if(true){
+  if(
+      req.body.userName.length > 5 &&
+      req.body.userName.match(/1|2|3|4|5|6|7|8|9/g) &&
+      req.body.password.length > 5 &&
+      req.body.password.includes(
+        '!', '@', '#', '$', '$', '%', '^',
+        '&', '*', '(', ')', '~', '`', ',',
+        '.', '<', '>', ':', ';', '{', '}',
+        '[', ']', '|', '\\', '\'', '\"',
+        '-', '_', '+', '=') &&
+      req.body.password.match(/1|2|3|4|5|6|7|8|9/g) &&
+      req.body.password.toLowerCase().match(/[a-z]/) &&
+      req.body.email.length > 7 &&
+      req.body.email.includes('@') &&
+      req.body.email.includes('.com')
+    ){
     req.app.get('db').newUser([
         req.body.fName,
         req.body.lName,
@@ -44,10 +63,10 @@ newUser: function(req, res, next){
         accountNumber,
         startBal
       ]).then(function(r){
-        res.status('200').send('welcome to our bank')
-        next();
-      }, function(rej){
-        console.log(rej);
+          req.body.userId = r[0].id;
+          next();
+        }, function(rej){
+          console.log(rej);
         res.status(500).send('error')
       })
   } else {
@@ -56,6 +75,29 @@ newUser: function(req, res, next){
 
 },
 // end of newuser
+
+
+// initial transaction insert
+newCustomerTransInsert: function(req, res, next){
+
+      let startBal = 500;
+      let message = 'welcome';
+      let date = moment().format('LL');
+
+    req.app.get('db').newCustomerTransInsert([
+      req.body.userId,
+      startBal,
+      date,
+      message,
+      startBal
+    ]).then(function(){
+      next();
+    }, function(rej){
+      console.log(rej);
+      res.status(500).send('error')
+    })
+},
+// end initial transaction insert
 
 
 // login

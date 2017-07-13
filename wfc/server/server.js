@@ -14,7 +14,8 @@ const express = require('express'),
         transactions,
         xfer,
         tsearch,
-        forgot
+        forgot,
+        newCustomerTransInsert
       } = require('./controllersNode/controller1')
 
 
@@ -37,7 +38,7 @@ massive(config.database).then(db => {
 
 // done
 // pass in fName, lName, userName, password, email
-app.post('/newUser', checkIfUserExists, newUser, login)
+app.post('/newUser', checkIfUserExists, newUser, newCustomerTransInsert, login)
 
 
 // done
