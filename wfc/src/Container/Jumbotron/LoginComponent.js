@@ -8,11 +8,13 @@ const LoginField = () => (
       <TextField
           hintText="Username/Email"
           floatingLabelText="Username/Email"
+        
         /><br />
       <TextField
         hintText="Password Field"
         floatingLabelText="Password"
         type="password"
+       
       /><br />
     </div>
   </MuiThemeProvider>
