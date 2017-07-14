@@ -32,7 +32,7 @@
   height: 11.4em;
   font-size: 0.5em;
 }
-.menu-dropdown-arrow, .hamburger-bars{
+.hamburger-bars{
   width:1.5em;
   height: 1.2em;
 }
@@ -50,22 +50,29 @@
 
 .dropdown-text{
   padding-left: 0.9em;
-  width: 9em;
+  width: 10em;
   display: flex;
 }
 
 .dropdown:hover {
     height: 10em;
     
+    
 }
 .dropdown:hover .dropdown-content {
-    display: flex;
+     display: flex;
+    position: fixed;
+    top: 0;
+    width: 101vw;
+    padding-top: 7em;
+    margin-left: -20em;
+    padding-left: 20em;
 }
 
 .dropdown-button {
+    padding-top: 0px;
     border: none;
     color: white;
-    padding: 14px 16px;
     background-color: inherit;
 }
 .dropdown-content {
@@ -81,11 +88,22 @@
 }
 
 .dropdown-icon{
-  width: 5em;
-  fill: #000;
+  margin: 0 auto;
+  width: 2em;
+  fill: pink !important;
+}
+.icon-text{
+  font-size: 0.7em;
+  padding-top:1.5em;
+  margin: 0 auto;
+  text-align: center;
 }
 .icon-well{
-  width: 5em;
+  width: 6em;
+  height: 1em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -100,7 +118,9 @@
 
 .menu-dropdown-arrow {
   width: 1.2em;
-  margin-left: -1em;
+  margin-left: 9em;
+  margin-top: -3em;
+
 }
 .header-right{
   display: flex;
