@@ -1,9 +1,10 @@
-import {USER_LOGIN} from '../Actions/userLogin';
+import {FETCH_PROFILE} from '../Actions/userLogin';
 
-export default function (state=[],action){
+export default function login(state=[],action){
     switch(action.type){
-        case USER_LOGIN:
-        return [action.payload.data,...state]
+        case FETCH_PROFILE:
+            return [...state,action.payload.data];
+        default:
+            return state;
     }
-    return state;
 }

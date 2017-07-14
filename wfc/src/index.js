@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './App';
+import { BrowserRouter as Router} from 'react-router-dom';
+import {AppContainer} from './AppContainer';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './Store/Store';
 
@@ -16,7 +17,9 @@ const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <Router>
+            <AppContainer />
+        </Router>
     </Provider>, 
     document.getElementById('root'));
 
