@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import login from './login';
 
 const rootReducer = combineReducers({
-    login
+   login
   // add your other reducers here
 })
 

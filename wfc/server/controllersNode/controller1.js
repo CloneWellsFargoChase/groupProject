@@ -102,7 +102,7 @@ newCustomerTransInsert: function(req, res, next){
 
 // login
 login: function(req, res){
-  console.log(req.body);
+  console.log(63,req.body);
   if(req.body.userName){
     req.app.get('db').loginU([
         req.body.userName,
@@ -128,7 +128,7 @@ login: function(req, res){
           res.status(200).send('user not found')
         }
       }, function(r){
-          console.log('74', r);
+        console.log('74', r);
         res.status(500).send('error')
       })
   }
