@@ -31,6 +31,7 @@ class Home extends Component {
                 </div>
                 <div>
                     <Footer />
+                   <Slider/>
                 </div>
             </div>
         </MuiThemeProvider>
