@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.filler {
+  width: 100vw;
+  border-top: 1px solid lightgrey;
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .filler .infoContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px; }
+  .filler button {
+    width: 225px;
+    height: 40px;
+    background-color: #0D7638;
+    color: white;
+    border-radius: 4px; }

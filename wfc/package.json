@@ -8,9 +8,12 @@
     "bootstrap": "^3.3.7",
     "cors": "^2.8.3",
     "express": "^4.15.3",
+    "font-awesome": "^4.7.0",
     "massive": "^3.0.0-rc1",
-    "moment": "^2.18.1",
     "material-ui": "^0.18.6",
+    "moment": "^2.18.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
@@ -21,6 +24,8 @@
     "redux": "^3.7.1"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

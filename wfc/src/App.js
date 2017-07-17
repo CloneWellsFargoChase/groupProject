@@ -6,7 +6,7 @@ import Account from './Page/Account';
 import Home from './Page/Home';
 import SignUp from './Page/SignUp';
 import Transfer from './Page/Transfer';
-import Slider from './Container/Slider/SliderView';
+
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
@@ -24,9 +24,6 @@ class App extends Component {
             <Route path="/signup" component={SignUp}/>
           </Switch>
         </Router>
-        GROUP PROJECT!!!
-
-        <Slider />
       </div>
     );
   }
