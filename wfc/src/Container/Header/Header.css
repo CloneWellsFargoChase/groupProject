@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid black;
+
+}
+
+.App {
+  text-align: center;
+}
+
+
+/*.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}*/
+
+.header {
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  padding: 20px;
+  color: blue;
+  height: 11.4em;
+  font-size: 0.5em;
+}
+.hamburger-bars{
+  width: 1.5em;
+  height: 1.2em;
+}
+.header-text {
+  height: 3em;
+  color: #fff;
+  font-size: 2.825em;
+  text-shadow: 0.5px 0.5px 5px #000;
+  width: 62em;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.dropdown-text{
+  padding-left: 0.9em;
+  width: 10em;
+  display: flex;
+}
+
+
+
+.dropdown:hover .header{
+display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    position: fixed;
+    width: 119vw;
+    top: 0;
+    padding-top: 7em;
+    margin-left: -21em;
+    padding-left: 20em;
+}
+
+.dropdown-button {
+    padding-top: 0px;
+    border: none;
+    color: white;
+    background-color: inherit;
+}
+.dropdown-content {
+    height: 10em;
+    transition: transition height 2s;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.dropdown-icon{
+  margin: 0 auto;
+  width: 2em;
+  fill: pink !important;
+}
+.icon-text{
+  font-size: 0.7em;
+  padding-top:1.5em;
+  margin: 0 auto;
+  text-align: center;
+}
+.icon-well{
+  width: 6em;
+  height: 1em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+.menu-dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 13em;
+}
+
+.menu-dropdown-arrow {
+  width: 1.2em;
+  margin-left: 9em;
+  margin-top: -3em;
+
+}
+.header-right{
+  display: flex;
+  justify-content: space-between;
+  width: 15em;
+
+}
+.magnifying-glass{
+  width:1.5em;
+  height: 2.2em;
+}
+.header-middle{
+  height: 2em;
+  width: 5em;
+}
+
+.chase-logo{
+  margin-top:-2.75em;
+  width: 2em;
+}
+
+.chase-text{
+  margin-top: -2em;
+  width: 6em;
+}
