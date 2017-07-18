@@ -1,0 +1,6 @@
+.signupfield {
+  display: flex;
+  margin-top: 15vh;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;}
