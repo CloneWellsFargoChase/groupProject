@@ -1,19 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.carouselSlider {
+  font-size: 30px; }
+
 .carouselContainer {
-    width: 100vw;
-    height: 200px;
-
-}
-.itemContainer {
+  width: 100vw;
+  height: 150px; }
+  .carouselContainer .itemContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-}
-.carouselImage {
-    width: 150px;
-    height: 150px;
-}
-
-a {
-    text-decoration: none;
-}
+    align-items: center; }
+    .carouselContainer .itemContainer .carouselImage {
+      height: 75px;
+      width: 75px; }

@@ -1,0 +1,23 @@
+.newsContainer {
+    background: #F3F0E9;
+    width: 100vw;
+    height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5vw;
+
+    .picTextContainer {
+        width: 33.333%;
+        height: 33.333%; 
+        padding-top: 50px;
+    
+        img {
+            width: 95%;
+        }
+        p {
+
+        }
+    }
+}

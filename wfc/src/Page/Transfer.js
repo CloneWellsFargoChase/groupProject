@@ -4,7 +4,7 @@ class Transfer extends Component {
     render() {
         return (
             <div>
-                
+                test transfer
             </div>
         );
     }
