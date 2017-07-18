@@ -14,11 +14,11 @@ const express = require('express'),
         newUser,
         login,
         transactions,
-        xfer,
+        transfer,
         tsearch,
         forgot,
         newCustomerTransInsert,
-        reset
+        reset,
       } = require('./controllersNode/controller1'),
       { dos } = require('./controllersNode/dos')
 
@@ -41,11 +41,11 @@ massive(config.database).then(db => {
 
 
 // pass in from username and to username & email
-app.get('/transactions', transactions)
+app.post('/transactions', transactions)
 
 
 // pass in userName and email for target acct make sure amount is +
-app.get('/xfer', checkIfUserExists, xfer)
+app.post('/transfer', transfer)
 
 
 //endpoint 3rd party billpay (insert a charge, probably just via postman)
