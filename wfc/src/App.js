@@ -1,6 +1,9 @@
 //the App.js file will serve as a routing app
 
 import React, { Component } from 'react';
+import Slider from './Container/Slider/SliderView'
+import Jumbotron from './Container/Jumbotron/JumbotronView'
+
 import {Switch,Route} from 'react-router-dom';
 import Account from './Page/Account';
 import Home from './Page/Home';
@@ -15,6 +18,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/*<Jumbotron />*/}
+        {/*<Slider />*/}
       GroupProject!
           <Switch>
             <Route exact path="/" component={Home}/>
