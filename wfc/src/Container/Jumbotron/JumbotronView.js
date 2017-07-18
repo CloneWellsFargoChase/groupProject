@@ -10,16 +10,17 @@ class Jumbotron extends Component {
     
     render() {
         return (
- 
+            <div className="all-Jumbotron">
             <div className="bg">
                 <img src={bg} alt=""/>
-            </div>
+                </div>
             <div className="jumbo-container">
                 <div className="login-box">
                     <UserLoginContainer />
                     <p>Forgot username/password?</p>
                     <p>Not entrolled?<Link to="/signup">Sign up now</Link></p>
                 </div>
+            </div>
             </div>
         );
     }
