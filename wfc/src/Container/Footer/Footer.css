@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.followUs {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 40px;
+  height: 80px;
+  width: 100vw;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; }
+  .followUs .followContainer {
+    margin-top: 10px;
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .followUs .followContainer p {
+      margin-top: 8px;
+      font-size: 20px;
+      color: #717171; }
+    .followUs .followContainer i {
+      color: #717171; }
