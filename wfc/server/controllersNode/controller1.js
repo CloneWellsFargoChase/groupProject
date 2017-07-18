@@ -1,6 +1,6 @@
 ////// REQUIRED //////
 const axios = require('axios'),
-      moment =  require('moment');
+      moment =  require('moment')
 
 
 ////// EXPORTS //////
@@ -66,7 +66,7 @@ newUser: function(req, res, next){
           req.body.userId = r[0].id;
           next();
         }, function(rej){
-          console.log(rej);
+          console.log('69', rej);
         res.status(500).send('error')
       })
   } else {
@@ -93,7 +93,7 @@ newCustomerTransInsert: function(req, res, next){
     ]).then(function(){
       next();
     }, function(rej){
-      console.log(rej);
+      console.log('96', rej);
       res.status(500).send('error')
     })
 },
@@ -101,8 +101,8 @@ newCustomerTransInsert: function(req, res, next){
 
 
 // login
-login: function(req, res){
-  console.log(63,req.body);
+login: function(req, res, next){
+
   if(req.body.userName){
     req.app.get('db').loginU([
         req.body.userName,
@@ -110,6 +110,7 @@ login: function(req, res){
       ]).then(function(r){
         if(r.length > 0){
           res.status(200).send(r)
+          next()
         } else {
           res.status(200).send('user not found')
         }
@@ -124,6 +125,7 @@ login: function(req, res){
       ]).then(function(r){
         if(r.length > 0){
           res.status(200).send(r)
+          next()
         } else {
           res.status(200).send('user not found')
         }
@@ -163,17 +165,80 @@ xfer: function(req, res){
 
 // search for transaction
 tsearch: function(req, res){
-  // req.params.val
-  //binary search tree creation/lookup
+
+  if(req.body.d && Number(req.body.a)){
+    req.app.get('db').searchDA([
+      req.body.d,
+      Number(req.body.a),
+      req.body.userId
+    ]).then(function(r){
+      res.status(200).send(r)
+    })
+  } else if(req.body.d){
+    req.app.get('db').searchD([
+      req.body.d,
+      req.body.userId
+    ]).then(function(r){
+      res.status(200).send(r)
+    })
+
+  } else if(req.body.a){
+    req.app.get('db').searchA([
+      Number(req.body.a),
+      req.body.userId
+    ]).then(function(r){
+      res.status(200).send(r)
+    })
+  } else {
+    res.status(400).send('please enter search value')
+  }
 },
 // end of search for transaction
 
 
 // forgot username/password
-forgot: function(req, res){
-  // take in ___ and send email with ___ info
-}
+forgot: function(req, res, next){
+  console.log(req.body.userName, req.body.email);
+  req.app.get('db').checkIfUserAndEmailMatch([
+    req.body.userName,
+    req.body.email
+  ]).then(function(r){
+    if(r[0]){
+      res.status(200).send('check your email');
+      next()
+    } else {
+      res.status(400).send('nice try')
+    }
+  })
+},
 // end forgot username/password
+
+
+// reset link
+reset: function(req, res, next){
+  if(
+    req.body.password.length > 5 &&
+    req.body.password.includes(
+      '!', '@', '#', '$', '$', '%', '^',
+      '&', '*', '(', ')', '~', '`', ',',
+      '.', '<', '>', ':', ';', '{', '}',
+      '[', ']', '|', '\\', '\'', '\"',
+      '-', '_', '+', '=') &&
+    req.body.password.match(/1|2|3|4|5|6|7|8|9/g) &&
+    req.body.password.toLowerCase().match(/[a-z]/)
+  ){
+    req.app.get('db').resetPassword([
+      req.body.userName,
+      req.body.password
+    ]).then(function(r){
+      next()
+    })
+  } else {
+    res.status(400).send('check you input')
+  }
+
+}
+// end reset link
 
 
 }
