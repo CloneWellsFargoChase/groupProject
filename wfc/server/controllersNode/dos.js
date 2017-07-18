@@ -17,7 +17,7 @@ module.exports = {
         let counter = 0;
       allIps.map((i) => {if(i == ip) counter += 1});
         console.log(counter);
-      counter > 10 ? res.status(400).send('you shall not pass') : next();
+      counter > 100 ? res.status(400).send('you shall not pass') : next();
     })
   }
 

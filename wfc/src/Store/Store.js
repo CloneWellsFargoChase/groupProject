@@ -1,17 +1,12 @@
-import { compose, createStore } from 'redux';
+import {createStore,applyMiddleware } from 'redux';
 import rootReducer from '../Reducers/index';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger'
 
-export default function configureStore(preloadedState) {
+export default function configureStore(initialState) {
   return createStore(
     rootReducer,
-    preloadedState,
-    compose(
-      // applyMiddleware(), // add your middlewares here
-      /**
-       * Conditionally add the Redux DevTools extension enhancer
-       * if it is installed.
-       */
-    )
-
+    initialState,
+    applyMiddleware(thunk,logger)// add your middlewares here
   )
 }
