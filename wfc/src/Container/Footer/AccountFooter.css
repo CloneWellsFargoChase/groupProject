@@ -1,0 +1,8 @@
+.AccountFooterDiv {
+  border: 1px solid black;
+  width: 800px;
+  height: 900px;
+  background: pink;
+  position: relative;
+  top: 500px;
+}
