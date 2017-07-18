@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css'
-import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+// import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 class Footer extends Component {
     render() {
