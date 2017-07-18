@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import Header from './Container/Header/HeaderView';
 import Slider from './Container/Slider/SliderView'
+import Jumbotron from './Container/Jumbotron/JumbotronView'
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        {/*<Jumbotron />*/}
         {/*<Slider />*/}
       </div>
     );

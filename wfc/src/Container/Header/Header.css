@@ -2,6 +2,7 @@
 * {
   font-family: 'Open Sans', sans-serif;
   border: 1px solid black;
+
 }
 
 .App {
@@ -15,8 +16,7 @@
 }*/
 
 .header {
-  /*overflow: hidden;*/
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
   background-position-x: initial;
   background-position-y: initial;
@@ -33,7 +33,7 @@
   font-size: 0.5em;
 }
 .hamburger-bars{
-  width:1.5em;
+  width: 1.5em;
   height: 1.2em;
 }
 .header-text {
@@ -54,18 +54,19 @@
   display: flex;
 }
 
-.dropdown:hover {
-    height: 10em;
-    
-    
+
+
+.dropdown:hover .header{
+display: none;
 }
+
 .dropdown:hover .dropdown-content {
-     display: flex;
+    display: flex;
     position: fixed;
+    width: 119vw;
     top: 0;
-    width: 101vw;
     padding-top: 7em;
-    margin-left: -20em;
+    margin-left: -21em;
     padding-left: 20em;
 }
 
@@ -76,12 +77,11 @@
     background-color: inherit;
 }
 .dropdown-content {
-   height: 10em;
+    height: 10em;
     transition: transition height 2s;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     background-color: rgba(0,0,0,0.2);
@@ -134,6 +134,7 @@
 }
 .header-middle{
   height: 2em;
+  width: 5em;
 }
 
 .chase-logo{

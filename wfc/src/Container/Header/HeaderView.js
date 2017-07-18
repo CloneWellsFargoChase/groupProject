@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import hamburger from '../../Images/Icons/hamburger.svg';
-import arrow from '../../Images/Icons/down-arrow.svg';
-import magnify from '../../Images/Icons/magnifying-glass.svg';
-import text from '../../Images/Icons/chase-text.svg';
-import logo from '../../Images/Icons/chase-logo.svg';
+import hamburger from '../../Images/Icons/Header-icons/hamburger.svg';
+import arrow from '../../Images/Icons/Header-icons/down-arrow.svg';
+import magnify from '../../Images/Icons/Header-icons/magnifying-glass.svg';
+import text from '../../Images/Icons/Header-icons/chase-text.svg';
+import logo from '../../Images/Icons/Header-icons/chase-logo.svg';
 import './Header.css';
 
 class Header extends Component {
@@ -25,78 +25,76 @@ class Header extends Component {
                     
                     <div className="icon-well">
                         <img className='dropdown-icon' src={require
-                        ("../../Images/Icons/credit-card-back-symbol.svg")}/>
+                        ("../../Images/Icons/Header-icons/credit-card-back-symbol.svg")}/>
                         <div className="icon-text">
                           Credit cards
                         </div>
                     </div>
                     
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/check-with-pen.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/check-with-pen.svg")} />
                         <div className="icon-text">
                           Checking
                         </div>
                     </div>
 
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/wallet.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/wallet.svg")} />
                         <div className="icon-text">
                           Savings and CDs
                         </div>
                     </div>
                   
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/credit-card-with-plus-sign.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/credit-card-with-plus-sign.svg")} />
                         <div className="icon-text">
                           Prepaid cards
                         </div>
                     </div>
 
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/house.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/house.svg")} />
                         <div className="icon-text">
                           Mortgage & Home Equity
                         </div>
                     </div>
 
                     <div className="icon-well">
-                    <img className='dropdown-icon' src={require("../../Images/Icons/line-chart.svg")} />
+                    <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/line-chart.svg")} />
                         <div className="icon-text">
                           investing
                         </div>
                     </div>
 
                        <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/key.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/key.svg")} />
                         <div className="icon-text">
                           Auto loans
                         </div>
                     </div>
 
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/briefcase.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/briefcase.svg")} />
                         <div className="icon-text">
                           Chase for Business
                         </div>
                     </div>
 
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/skyline.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/skyline.svg")} />
                         <div className="icon-text">
                           Commercial Banking
                         </div>
                     </div>
 
                     <div className="icon-well">
-                      <img className='dropdown-icon' src={require("../../Images/Icons/more-button-of-circular-shape.svg")} />
+                      <img className='dropdown-icon' src={require("../../Images/Icons/Header-icons/more-button-of-circular-shape.svg")} />
                         <div className="icon-text">
                           See all
                         </div>
                     </div>
-                    
-                  
                   </div>
-                  </div>
+                </div>
             </div>
           </div>
         <div className="header-middle">
