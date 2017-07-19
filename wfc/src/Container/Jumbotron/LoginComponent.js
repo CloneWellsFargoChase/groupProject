@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {userLogin} from '../../Actions/userLogin';
-
+    
 class LoginField extends Component{
 
     constructor(props) {
@@ -35,6 +36,7 @@ class LoginField extends Component{
   }
 
   render(){
+
     return(
       <div>
         <form className="input-group" onSubmit={this.onFormSubmit}>
@@ -60,6 +62,11 @@ function mapDispatchToProps(dispatch){
     return bindActionCreators({userLogin},dispatch);
 }
 
-var UserLoginContainer = connect(null,mapDispatchToProps)(LoginField);
+function mapStateToProps({login}){
+  console.log(login);
+  return {login};
+}
+
+var UserLoginContainer = withRouter(connect(mapStateToProps,mapDispatchToProps)(LoginField));
 
 export default UserLoginContainer;
