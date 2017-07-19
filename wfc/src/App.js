@@ -20,7 +20,6 @@ class App extends Component {
       <div>
         {/*<Jumbotron />*/}
         {/*<Slider />*/}
-      GroupProject!
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/account" component={Account}/>

@@ -41,17 +41,18 @@ class LoginField extends Component{
       <div>
         <form className="input-group" onSubmit={this.onFormSubmit}>
           <TextField
-              floatingLabelText="Username/Email"
+              placeholder="Username"
+
               onChange={this.handleUserChange}
           />
           <br />
           <TextField
-            floatingLabelText="Password"
+            placeholder="Password"
             type="password"
             onChange={this.handlePasswordChange}
           />
           <br />
-          <RaisedButton type="submit" label="Login" primary={true} className="login-button"/>
+          <RaisedButton type="submit" label="Sign in" primary={true} className="login-button"/>
         </form>
       </div>
       );

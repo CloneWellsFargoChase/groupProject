@@ -31,6 +31,8 @@
   color: blue;
   height: 11.4em;
   font-size: 0.5em;
+  position: fixed;
+  width: 100%;
 }
 .hamburger-bars{
   width: 1.5em;
@@ -72,7 +74,7 @@ display: none;
 
 .dropdown-button {
     padding-top: 0px;
-    /* border: none; */
+     border: none; 
     color: white;
     background-color: inherit;
 }
@@ -84,7 +86,7 @@ display: none;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.7);
 }
 
 .dropdown-icon{
