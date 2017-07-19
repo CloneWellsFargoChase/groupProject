@@ -4,3 +4,51 @@
   height: 100px;
   background: orange;
 }
+
+
+/* upper header */
+
+.AccountHeaderUpper {
+  height: 60%;
+  background-image: url('../../Images/AccountHeaderUpperClouds1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.AccountHeaderUpperLeft {
+  display: flex;
+}
+
+.AccountHeaderUpperCenter {
+  display: flex;
+}
+
+.AccountHeaderUpperRight {
+  display: flex;
+}
+
+/* upper header end */
+
+
+/* lower header */
+
+.AccountHeaderLower {
+  height: 40%;
+  background: #096DF7;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.AccountHeaderLower div {
+  margin-left: 1.5%;
+  color: white;
+}
+
+/* lower header end */
