@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import SignUpComponent from '../Container/SignUp/SignUpView';
+import CreateAccount from '../Container/SignUp/SignUpView';
 
 
 
@@ -10,7 +10,7 @@ class SignUp extends Component {
         return (
             <MuiThemeProvider>
                 <div>
-                    <SignUpComponent />
+                    <CreateAccount />
                 </div>
             </MuiThemeProvider>
         );

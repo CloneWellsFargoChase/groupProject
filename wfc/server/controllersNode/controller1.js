@@ -140,13 +140,10 @@ login: function(req, res, next){
 
 // get transactions for user
 transactions: function(req, res){
-<<<<<<< HEAD
   req.app.get('db').getAllTransactions([
     req.body.userId]).then((resp) => {
       res.status(200).send(resp)
     })
-=======
->>>>>>> 3108d451ea71ce3e841e7e1d047efa0b6e6def92
   // get all transactions for a user
 
 },
