@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Container/Header/HeaderView';
 import Jumbotron from '../Container/Jumbotron/JumbotronView';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
@@ -9,14 +10,17 @@ import Footer from '../Container/Footer/FooterView';
 
 injectTapEventPlugin();
 
+
 class Home extends Component {
     render() {
         return (
         <MuiThemeProvider>
             <div>
-                <div>
-                   { /*header goes here*/}  
+                <div>   
+                    <Header />
                 </div>
+                   { /*header goes here*/}  
+
                 <div>
                     <Jumbotron />
                 </div>
@@ -31,12 +35,11 @@ class Home extends Component {
                 </div>
                 <div>
                     <Footer />
-                   <Slider/>
                 </div>
             </div>
-        </MuiThemeProvider>
+    </MuiThemeProvider>
         );
     }
 }
 
-export default Home;
+export default Home
