@@ -1,3 +1,10 @@
+img{
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        z-index: -2;
+        display: none;
+}
 .jumbo-container{
     width:100%;
     height:25rem;
