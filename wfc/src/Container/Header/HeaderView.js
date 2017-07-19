@@ -99,7 +99,7 @@ class Header extends Component {
           </div>
         <div className="header-middle">
           <img src={text} className="chase-text" />
-          <img src={logo} className="chase-logo" />
+          <img src={logo} className="chase-logo" alt="test" />
         </div>
           <div className="header-right">
             <div className="atm">ATM & branch</div>
