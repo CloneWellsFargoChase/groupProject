@@ -18,9 +18,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/*<Jumbotron />*/}
-        {/*<Slider />*/}
-      GroupProject!
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/account" component={Account}/>
