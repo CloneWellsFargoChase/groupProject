@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cardFinder from '../../Images/cardFinder.jpg';
 
 export default class AccountBodyLeft extends Component {
     render() {
@@ -8,14 +9,14 @@ export default class AccountBodyLeft extends Component {
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
-                    <div>$amnt</div>
-                    <div>Available balance</div>
+                    <div className="ABLTamount">$amnt</div>
+                    <div className="ABLTtext">Available balance</div>
                   </div>
                 </div>
 
                 <div className="AccountBodyLeftBottom">
 
-                  <div className="AccountBodyLeftBottomImg">cardIMG</div>
+                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
 
                   <div className="AccountBodyLeftBottomText">
                     <div className="AccountBodyLeftBottomTextHead">The quick & simple card finder</div>

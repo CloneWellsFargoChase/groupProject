@@ -152,10 +152,14 @@ transactions: function(req, res){
 
 // end of xfer
 transfer: function(req, res, next){
+    let user_name = 'a';
+
+  console.log('155', req.body);
+
   let db = req.app.get('db')
   let userInfo = []
   db.getUserInfo([
-  req.body.user_name
+  user_name
   ])
   .then((resp) => {
     userInfo.push(...resp)
@@ -180,7 +184,7 @@ transfer: function(req, res, next){
   // check to make sure inputted username and email match an acct
   // insert row into transactions (from acct)
   // update bal in users table (from acct)
-  // take in username and dollar amount from the person and 
+  // take in username and dollar amount from the person and
   // insert row into transactions (to acct)
   // update bal in users table (to acct)
 },

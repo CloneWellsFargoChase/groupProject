@@ -4,6 +4,9 @@ import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import {redA500, blue500} from 'material-ui/styles/colors';
 import TXButton from './Txbutton';
+import txSubmit from '../../Actions/txSubmit';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 const styles = {
   floatingLabelStyle: {
@@ -27,7 +30,67 @@ const styles = {
 };
 
 class Transaction extends Component {
-    
+
+  constructor(props){
+    super(props);
+    this.state = {
+      from: '',
+      to: '',
+      amount: '',
+      date: '',
+      memo: ''
+    }
+
+this.fromChange = this.fromChange.bind(this);
+this.toChange = this.toChange.bind(this);
+this.amountChange = this.amountChange.bind(this);
+this.dateChange = this.dateChange.bind(this);
+this.memoChange = this.memoChange.bind(this);
+this.transactionSubmit = this.transactionSubmit.bind(this);
+
+  }
+
+  fromChange(e){
+    this.setState({
+      from: e.target.value
+    })
+  }
+
+  toChange(e){
+    this.setState({
+      to: e.target.value
+    })
+  }
+
+  amountChange(e){
+    this.setState({
+      amount: e.target.value
+    })
+  }
+
+  dateChange(e){
+    this.setState({
+      date: e.target.value
+    })
+  }
+
+  memoChange(e){
+    this.setState({
+      memo: e.target.value
+    })
+  }
+
+  transactionSubmit(e){
+    txSubmit({
+        from: this.state.from,
+        to: this.state.to,
+        amount: this.state.amount,
+        date: this.state.date,
+        memo: this.state.memo
+      });
+    console.log(this.state);
+  }
+
     render() {
         return (
             <div>
@@ -37,12 +100,14 @@ class Transaction extends Component {
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
+                        onChange={this.fromChange}
                     />
                     <TextField
                         floatingLabelText="Transfer to"
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
+                        onChange={this.toChange}
                     />
                     <br/>
                     <TextField
@@ -50,12 +115,14 @@ class Transaction extends Component {
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
+                        onChange={this.amountChange}
                     />
                     <TextField
                         floatingLabelText="Transfer date"
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
+                        onChange={this.dateChange}
                     />
                     <br/>
                     <TextField
@@ -63,14 +130,19 @@ class Transaction extends Component {
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textFieldMemo}
+                        onChange={this.memoChange}
                     />
                     <br/>
                     <br/>
-                    <TXButton/>
+                    <TXButton clickE={this.transactionSubmit}/>
                 </Paper>
             </div>
         );
     }
 }
 
-export default Transaction;
+function mapDispatchToProps() {
+  return txSubmit
+}
+const TransactionContainer = connect(null, mapDispatchToProps)(Transaction);
+export default TransactionContainer
