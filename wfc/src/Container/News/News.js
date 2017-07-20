@@ -5,6 +5,7 @@ class News extends Component {
     render() {
         return (
             <div>
+                <div id='newsTitle'><p>News &amp; Stories</p></div>
                 <div className='newsContainer'>
                     <div className='picTextContainer'>
                         <img src={require('../../Images/millenials.jpeg')}/>
