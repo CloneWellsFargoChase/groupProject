@@ -140,6 +140,10 @@ login: function(req, res, next){
 
 // get transactions for user
 transactions: function(req, res){
+  req.app.get('db').getAllTransactions([
+    req.body.userId]).then((resp) => {
+      res.status(200).send(resp)
+    })
   // get all transactions for a user
 
 },
@@ -147,11 +151,36 @@ transactions: function(req, res){
 
 
 // end of xfer
-xfer: function(req, res){
+transfer: function(req, res, next){
+  let db = req.app.get('db')
+  let userInfo = []
+  db.getUserInfo([
+  req.body.user_name
+  ])
+  .then((resp) => {
+    userInfo.push(...resp)
+    db.transferOut([
+      req.app.userId,
+      userInfo.user_name,
+      req.app.amount
+    ])
+    .then((resp) => {
+      res.status(200)
+    })
+    db.transferIn([
+      userInfo.user_name,
+      req.app.userId,
+      req.app.amount
+    ])
+    .then((resp) => {
+      res.status(200).send('Transfer successful')
+    })
+  })
   // perform xfer process
   // check to make sure inputted username and email match an acct
   // insert row into transactions (from acct)
   // update bal in users table (from acct)
+  // take in username and dollar amount from the person and 
   // insert row into transactions (to acct)
   // update bal in users table (to acct)
 },
