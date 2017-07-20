@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-* {
+.header * {
   font-family: 'Open Sans', sans-serif;
-  /* border: 1px solid black; */
+   border: 1px solid black; 
 
 }
 
@@ -31,6 +31,8 @@
   color: blue;
   height: 11.4em;
   font-size: 0.5em;
+  position: fixed;
+  width: 100%;
 }
 .hamburger-bars{
   width: 1.5em;
@@ -64,7 +66,7 @@ display: none;
     display: flex;
     position: fixed;
     width: 119vw;
-    top: 0;
+    top: 0; 
     padding-top: 7em;
     margin-left: -21em;
     padding-left: 20em;
@@ -72,7 +74,7 @@ display: none;
 
 .dropdown-button {
     padding-top: 0px;
-    /* border: none; */
+     border: none; 
     color: white;
     background-color: inherit;
 }
@@ -84,7 +86,7 @@ display: none;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.7);
 }
 
 .dropdown-icon{
@@ -98,7 +100,12 @@ display: none;
   margin: 0 auto;
   text-align: center;
 }
+.dropdown:hover .icon-well {
+    opacity: 1;
+}
 .icon-well{
+  transition: opacity 1s ease-in;
+  opacity: 0;
   width: 6em;
   height: 1em;
   display:flex;
@@ -130,7 +137,7 @@ display: none;
 }
 .header-middle{
   height: 2em;
-  width: 5em;
+  width: 9em;
 }
 
 .chase-logo{
