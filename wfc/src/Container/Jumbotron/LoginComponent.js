@@ -33,6 +33,7 @@ class LoginField extends Component{
       event.preventDefault();
       this.props.userLogin({username:this.state.username,password:this.state.password});
       this.setState({username:'',password:''});
+      console.log(this.state);
   }
 
   render(){
