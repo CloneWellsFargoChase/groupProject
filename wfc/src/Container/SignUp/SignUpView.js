@@ -77,43 +77,42 @@ class SignUpComponent extends Component {
     })
   }
 
-
   render() {
     return (
-      <div>
-        <form className='signupfield' onSubmit={this.onFormSubmit}>
-          <TextField
-            onChange={this.firstNameChange}
-            hintText="First Name"
-            floatingLabelText="First Name"
-          /><br />
-          <TextField
-            onChange={this.lastNameChange}
-            hintText="Last Name"
-            floatingLabelText="Last Name"
-          /><br />
-          <TextField
-            onChange={this.userNameChange}
-            hintText="User Name"
-            floatingLabelText="User Name"
-          /><br />
-          <TextField
-            onChange={this.emailChange}
-            hintText="Email"
-            floatingLabelText="Email"
-          /><br />
-          <TextField
-            onChange={this.passwordChange}
-            hintText="Password Field"
-            floatingLabelText="Password"
-            type="password"
-          /><br />
-          <RaisedButton 
-          type="submit"
-          label="Submit" 
-          primary={true}
-           />
-        </form>
+      <div className='signupMain'>
+          <form className='signupfield' onSubmit={this.onFormSubmit}>
+            <TextField
+              onChange={this.firstNameChange}
+              hintText="First Name"
+              floatingLabelText="First Name"
+            /><br />
+            <TextField
+              onChange={this.lastNameChange}
+              hintText="Last Name"
+              floatingLabelText="Last Name"
+            /><br />
+            <TextField
+              onChange={this.userNameChange}
+              hintText="User Name"
+              floatingLabelText="User Name"
+            /><br />
+            <TextField
+              onChange={this.emailChange}
+              hintText="Email"
+              floatingLabelText="Email"
+            /><br />
+            <TextField
+              onChange={this.passwordChange}
+              hintText="Password Field"
+              floatingLabelText="Password"
+              type="password"
+            /><br />
+            <RaisedButton 
+            type="submit"
+            label="Submit" 
+            primary={true}
+            />
+          </form>
       </div>
     );
   }

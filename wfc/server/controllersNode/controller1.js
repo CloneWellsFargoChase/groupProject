@@ -153,39 +153,39 @@ transactions: function(req, res){
 // end of xfer
 transfer: function(req, res, next){
   let db = req.app.get('db')
-  let userInfo = []
+  let toUserInfo = []
+  let fromUserInfo = []
+  let currentDate = moment().format('LL');
+  // The FROM user info part of the function
   db.getUserInfo([
-  req.body.user_name
+    req.body.from_user_name
   ])
   .then((resp) => {
-    userInfo.push(...resp)
-    db.transferOut([
-      req.app.userId,
-      userInfo.user_name,
-      req.app.amount
-    ])
-    .then((resp) => {
-      res.status(200)
-    })
-    db.transferIn([
-      userInfo.user_name,
-      req.app.userId,
-      req.app.amount
-    ])
-    .then((resp) => {
-      res.status(200).send('Transfer successful')
+    fromUserInfo.push(resp[0].id);
+    fromUserInfo.push(resp[0].balance - req.body.amount)
+    fromUserInfo.push(currentDate)
+    fromUserInfo.push(`${req.body.to_user_name} ${req.body.memo}`)
+    fromUserInfo.push(req.body.amount)
+
+    db.transferOut(fromUserInfo)
+  })
+    // The TO user info part of the function
+  db.getUserInfo([
+    req.body.to_user_name
+  ])
+  .then((resp) => {
+    toUserInfo.push(resp[0].id);
+    toUserInfo.push(resp[0].balance + req.body.amount);
+    toUserInfo.push(currentDate);
+    toUserInfo.push(`${req.body.from_user_name} ${req.body.memo}`)
+    toUserInfo.push(req.body.amount)
+
+    db.transferIn(toUserInfo).then(() =>{
+      res.status(200).send('Transaction Successful!')
     })
   })
-  // perform xfer process
-  // check to make sure inputted username and email match an acct
-  // insert row into transactions (from acct)
-  // update bal in users table (from acct)
-  // take in username and dollar amount from the person and 
-  // insert row into transactions (to acct)
-  // update bal in users table (to acct)
 },
 // end of xfer
-
 
 // search for transaction
 tsearch: function(req, res){
