@@ -18,11 +18,10 @@ class App extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
+
         {/*<Jumbotron />*/}
         {/*<Slider />*/}
-=======
->>>>>>> master
+
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/account" component={Account}/>

@@ -71,9 +71,6 @@ display: none;
     margin-left: -21em;
     padding-left: 20em;
 }
-.dropdown:hover .icon-well {
-    opacity: 1;
-}
 
 .dropdown-button {
     padding-top: 0px;
@@ -102,6 +99,9 @@ display: none;
   padding-top:1.5em;
   margin: 0 auto;
   text-align: center;
+}
+.dropdown:hover .icon-well {
+    opacity: 1;
 }
 .icon-well{
   transition: opacity 1s ease-in;
