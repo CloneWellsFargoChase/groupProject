@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import hamburger from '../../Images/Icons/Header-icons/hamburger.svg';
 import arrow from '../../Images/Icons/Header-icons/down-arrow.svg';
@@ -6,7 +7,26 @@ import text from '../../Images/Icons/Header-icons/chase-text.svg';
 import logo from '../../Images/Icons/Header-icons/chase-logo.svg';
 import './Header.css';
 
+// const styles = { 
+//       transition: 'all 1s ease-in'
+// };
+
 class Header extends Component {
+
+//   constructor(){
+//     super();
+//     this.state = {
+//       opacity:0
+//     };
+//   }
+
+//   onShow()
+//   {
+//     this.setState({
+//       opacity: 1
+//     })
+// }
+
   render() {
     return (
       <div className="header">
@@ -15,7 +35,9 @@ class Header extends Component {
               <div className="menu-dropdown">
                 <img src={hamburger} className="hamburger-bars" />
                  <div className="dropdown">
-                 <button className="dropdown-button">
+                 <button className="dropdown-button" 
+                 /*onHover={this.onShow(this)} */
+                 >
                     <div className="dropdown-text"> 
                       Explore products
                     </div>
@@ -25,7 +47,9 @@ class Header extends Component {
                     
                     <div className="icon-well">
                         <img className='dropdown-icon' src={require
-                        ("../../Images/Icons/Header-icons/credit-card-back-symbol.svg")}/>
+                        ("../../Images/Icons/Header-icons/credit-card-back-symbol.svg")} 
+                        /*style={{...styles, opacity: this.state}}*/
+                        />
                         <div className="icon-text">
                           Credit cards
                         </div>
