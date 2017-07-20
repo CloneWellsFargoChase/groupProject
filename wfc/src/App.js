@@ -9,19 +9,20 @@ import Account from './Page/Account';
 import Home from './Page/Home';
 import SignUp from './Page/SignUp';
 import Transfer from './Page/Transfer';
+import {connect} from 'react-redux';
+import {withRouter,Redirect} from 'react-router-dom';
+import {bindActionCreators} from 'redux';
+import {loginSuccess} from './Actions/userLogin';
 
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-class App extends Component {
+class AppComponent extends Component {
+
   render() {
     return (
       <div>
-
-        {/*<Jumbotron />*/}
-        {/*<Slider />*/}
-
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/account" component={Account}/>
@@ -32,5 +33,15 @@ class App extends Component {
     );
   }
 }
+
+function mapDispatchToProps(dispatch){
+    return loginSuccess;
+}
+
+function mapStateToProps({login}){
+  return {login};
+}
+
+var App = withRouter(connect(mapStateToProps,mapDispatchToProps)(AppComponent));
 
 export default App;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AccountHeader.css';
+import chaseL from '../../Images/chaseL.png';
 
 export default class AccountHeader extends Component {
     render() {
@@ -12,7 +13,7 @@ export default class AccountHeader extends Component {
                   <div>Fl</div>
                 </div>
                 <div className="AccountHeaderUpperCenter">
-                  <img src="../../Images/chaseL.png" />
+                  <img src={chaseL} />
                 </div>
                 <div className="AccountHeaderUpperRight">
                   <div>Srch</div>
@@ -20,12 +21,11 @@ export default class AccountHeader extends Component {
                   <div>SignO</div>
                 </div>
               </div>
-              <div className="AccountHeaderLower">
-                <div>Accounts</div>
-                <div>Pay & transfer</div>
-              </div>
-
             </div>
         );
     }
 }
+              // <div className="AccountHeaderLower">
+              //   <div>Accounts</div>
+              //   <div>Pay & transfer</div>
+              // </div>

@@ -9,7 +9,7 @@
 /* upper header */
 
 .AccountHeaderUpper {
-  height: 60%;
+  height: 15vh;
   background-image: url('../../Images/AccountHeaderUpperClouds1.jpg');
   background-repeat: no-repeat;
   background-position: center;

@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
+import {connect} from  'react-redux';
 
-export default class AccountBodyLeft extends Component {
-    render() {
+class AccountBody extends Component {
+  constructor(props){
+    super(props);
+  }
+
+  accountBalance(data){
+    let balance = data.balance;
+    return balance;
+  }
+
+    render(){
         return (
             <div className="AccountBodyLeft">
 
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
-                    <div>$amnt</div>
+                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Available balance</div>
                   </div>
                 </div>
 
                 <div className="AccountBodyLeftBottom">
 
-                  <div className="AccountBodyLeftBottomImg">cardIMG</div>
+                  <div className="AccountBodyLeftBottomImg"></div>
 
                   <div className="AccountBodyLeftBottomText">
                     <div className="AccountBodyLeftBottomTextHead">The quick & simple card finder</div>
@@ -31,3 +41,10 @@ export default class AccountBodyLeft extends Component {
         );
     }
 }
+
+function mapStateToProps({login}){
+  return {login};
+}
+
+var AccountBodyLeft  = connect(mapStateToProps)(AccountBody);
+export default AccountBodyLeft;

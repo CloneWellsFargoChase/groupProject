@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
+import {connect} from  'react-redux';
 
-export default class AccountBodyRight extends Component {
+class AccountBody2 extends Component {
+
+    accountBalance(data){
+      let balance = data.balance;
+      return balance;
+    }
+    accountNumber(data){
+      var account = data.account;
+      return account;
+    }
+
     render() {
         return (
             <div className="AccountBodyRight">
@@ -8,17 +19,15 @@ export default class AccountBodyRight extends Component {
               <div className="AccountBodyRightTop">
                 <div className="AccountBodyRightTopTop">
                   <div className="AccountBodyRightTopTop1">
-                    <div className="AccountBodyRightTopTop11">TOTAL CHECKING (...Number) > </div>
+                    <div className="AccountBodyRightTopTop11">CHECKING ACCOUNT NUMBER : {this.props.login.profile.map(this.accountNumber)} </div>
                     <div className="AccountBodyRightTopTop12">Things you can do v</div>
                   </div>
                   <div className="AccountBodyRightTopTop2">
-                    <div>Available balance</div>
                     <div>Present balance</div>
                     <div>Debit card coverage</div>
                   </div>
                   <div className="AccountBodyRightTopTop22">
-                    <div>$</div>
-                    <div>$</div>
+                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Off</div>
                   </div>
                   <div className="AccountBodyRightTopTop3">Set up ></div>
@@ -74,3 +83,12 @@ export default class AccountBodyRight extends Component {
         );
     }
 }
+
+
+
+function mapStateToProps({login}){
+  return {login};
+}
+
+var AccountBodyRight  = connect(mapStateToProps)(AccountBody2);
+export default AccountBodyRight;

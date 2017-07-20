@@ -75,6 +75,7 @@ class SignUpComponent extends Component {
       email: '',
       password: ''
     })
+    return this.props.history.push({ pathname: '/account'});
   }
 
   render() {
