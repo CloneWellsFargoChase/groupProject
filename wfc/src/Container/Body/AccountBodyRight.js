@@ -4,8 +4,12 @@ import {connect} from  'react-redux';
 class AccountBody2 extends Component {
 
     accountBalance(data){
-      let balance = data[0].balance;
+      let balance = data.balance;
       return balance;
+    }
+    accountNumber(data){
+      var account = data.account;
+      return account;
     }
 
     render() {
@@ -15,7 +19,7 @@ class AccountBody2 extends Component {
               <div className="AccountBodyRightTop">
                 <div className="AccountBodyRightTopTop">
                   <div className="AccountBodyRightTopTop1">
-                    <div className="AccountBodyRightTopTop11">TOTAL CHECKING (...Number) > </div>
+                    <div className="AccountBodyRightTopTop11">CHECKING ACCOUNT NUMBER : {this.props.login.profile.map(this.accountNumber)} </div>
                     <div className="AccountBodyRightTopTop12">Things you can do v</div>
                   </div>
                   <div className="AccountBodyRightTopTop2">
@@ -23,7 +27,7 @@ class AccountBody2 extends Component {
                     <div>Debit card coverage</div>
                   </div>
                   <div className="AccountBodyRightTopTop22">
-                    <div>${this.props.login.map(this.accountBalance)}</div>
+                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Off</div>
                   </div>
                   <div className="AccountBodyRightTopTop3">Set up ></div>
@@ -83,7 +87,6 @@ class AccountBody2 extends Component {
 
 
 function mapStateToProps({login}){
-  console.log({login});
   return {login};
 }
 

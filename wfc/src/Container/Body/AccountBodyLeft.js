@@ -7,7 +7,7 @@ class AccountBody extends Component {
   }
 
   accountBalance(data){
-    let balance = data[0].balance;
+    let balance = data.balance;
     return balance;
   }
 
@@ -18,7 +18,7 @@ class AccountBody extends Component {
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
-                    <div>${this.props.login.map(this.accountBalance)}</div>
+                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Available balance</div>
                   </div>
                 </div>
