@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import Transaction from '../Container/Transaction/Transaction';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class Transfer extends Component {
     render() {
         return (
-            <div>
-                test transfer
-            </div>
+           <MuiThemeProvider>
+                <div>
+                    <Transaction/>
+                </div>
+             </MuiThemeProvider>
         );
     }
 }
