@@ -22,7 +22,7 @@ const styles = {
       marginRight:'30px'
   },
   textFieldMemo:{
-      width:'60%'
+      width:'40%'
   }
 };
 
