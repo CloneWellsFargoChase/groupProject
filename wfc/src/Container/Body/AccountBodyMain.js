@@ -8,9 +8,14 @@ export default class AccountBodyMain extends Component {
         return (
             <div>
               <div className="AccountBodyMainDiv">
-                <AccountBodyLeft className="AccountBodyLeft" />
-                <AccountBodyRight className="AccountBodyRight" />
+                <div className="AccountBodyMainLastDate">
+                  some fancy date
                 </div>
+                <div>
+                  <AccountBodyLeft />
+                  <AccountBodyRight />
+                </div>
+              </div>
             </div>
         );
     }

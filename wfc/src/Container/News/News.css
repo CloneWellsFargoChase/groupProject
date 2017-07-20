@@ -6,12 +6,10 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2.5vw;
- }
+  padding: 2.5vw; }
   .newsContainer .picTextContainer {
     width: 33.333%;
-    height: 33.333%; 
-    padding-top: 50px}
-    .newsContainer img {
-      width: 95%;
-    }
+    height: 33.333%;
+    padding-top: 50px; }
+    .newsContainer .picTextContainer img {
+      width: 95%; }
