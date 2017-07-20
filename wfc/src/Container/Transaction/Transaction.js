@@ -15,8 +15,9 @@ const styles = {
   paperwidth: {
     borderRadius:'25px',
     textAlign:'center',
-    width: '40%',
-    height:'300px'
+    width: '80%',
+    height:'300px',
+    marginTop:'60px',
   },
   textfield:{
       marginRight:'30px'
@@ -30,7 +31,6 @@ class Transaction extends Component {
     
     render() {
         return (
-            <div>
                 <Paper zDepth={2} style={styles.paperwidth}>
                      <TextField
                         floatingLabelText="Transfer from"
@@ -68,7 +68,6 @@ class Transaction extends Component {
                     <br/>
                     <TXButton/>
                 </Paper>
-            </div>
         );
     }
 }

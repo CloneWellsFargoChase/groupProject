@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import {withRouter,Redirect} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {userLogin} from '../../Actions/userLogin';
     
@@ -33,7 +33,7 @@ class LoginField extends Component{
       event.preventDefault();
       this.props.userLogin({username:this.state.username,password:this.state.password});
       this.setState({username:'',password:''});
-      console.log(this.state);
+      return this.props.history.push({ pathname: '/account'});
   }
 
   render(){
@@ -53,7 +53,7 @@ class LoginField extends Component{
             onChange={this.handlePasswordChange}
           />
           <br />
-          <RaisedButton type="submit" label="Sign in" primary={true} className="login-button"/>
+          <RaisedButton type="submit" label="Sign in" primary={true} className="login-button"></RaisedButton>
         </form>
       </div>
       );
@@ -65,7 +65,6 @@ function mapDispatchToProps(dispatch){
 }
 
 function mapStateToProps({login}){
-  console.log(login);
   return {login};
 }
 
