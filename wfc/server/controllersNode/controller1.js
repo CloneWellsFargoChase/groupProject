@@ -152,7 +152,6 @@ transactions: function(req, res){
 
 // end of xfer
 transfer: function(req, res, next){
-    let user_name = 'a';
 
   console.log('155', req.body);
 
@@ -162,26 +161,26 @@ transfer: function(req, res, next){
   let currentDate = moment().format('LL');
   // The FROM user info part of the function
   db.getUserInfo([
-    req.body.from_user_name
+    req.body.from
   ])
   .then((resp) => {
     fromUserInfo.push(resp[0].id);
     fromUserInfo.push(resp[0].balance - req.body.amount)
     fromUserInfo.push(currentDate)
-    fromUserInfo.push(`${req.body.to_user_name} ${req.body.memo}`)
+    fromUserInfo.push(`${req.body.to} ${req.body.memo}`)
     fromUserInfo.push(req.body.amount)
 
     db.transferOut(fromUserInfo)
   })
     // The TO user info part of the function
   db.getUserInfo([
-    req.body.to_user_name
+    req.body.to
   ])
   .then((resp) => {
     toUserInfo.push(resp[0].id);
     toUserInfo.push(resp[0].balance + req.body.amount);
     toUserInfo.push(currentDate);
-    toUserInfo.push(`${req.body.from_user_name} ${req.body.memo}`)
+    toUserInfo.push(`${req.body.from} ${req.body.memo}`)
     toUserInfo.push(req.body.amount)
 
     db.transferIn(toUserInfo).then(() =>{

@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.newsWrapper {
+  width: 100vw;
+  background-color: #F3F0E9;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 #newsTitle {
   background: #F3F0E9;
   height: 75px;
@@ -19,13 +26,9 @@
   align-items: center;
   flex-wrap: wrap;
   padding: 2.5vw; }
-  .newsContainer .picTextContainer {
-    width: 33.333%;
-    height: 33.333%; }
-    .newsContainer .picTextContainer img {
-      width: 95%; }
-    .newsContainer .picTextContainer p {
-      height: 20%;
-      text-align: left;
-      font-size: 1.3em;
-      font-family: 'Open Sans', sans-serif; }
+  .newsContainer .picTextContainer p {
+    width: 100%;
+    height: 20%;
+    text-align: left;
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif; }
