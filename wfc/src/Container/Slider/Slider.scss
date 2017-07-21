@@ -6,11 +6,11 @@
 .carouselContainer {
     width: 100vw;
     height: 150px;
+    background-color: white;
     .itemContainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         .carouselImage {
             height: 75px;
             width: 75px;
