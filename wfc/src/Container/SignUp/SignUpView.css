@@ -1,6 +1,33 @@
+*{
+  border: 1px solid black;
+}
 .signupfield {
   display: flex;
   margin-top: 15vh;
   flex-direction: column;
   justify-content: center; 
   align-items: center;}
+
+.signup-header {
+  z-index: 5;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  padding: 20px;
+  color: blue;
+  height: 11.4em;
+  font-size: 0.5em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.signup-logo{
+width: 4em;
+}
