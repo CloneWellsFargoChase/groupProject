@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 import sales_agent from '../../Images/sales_agent.jpg';
+import {connect} from  'react-redux';
+
+class AccountBody2 extends Component {
+
+    accountBalance(data){
+      let balance = data.balance;
+      return balance;
+    }
+    accountNumber(data){
+      var account = data.account;
+      return account;
+    }
 
     render(){
         return (
@@ -64,6 +76,7 @@ import sales_agent from '../../Images/sales_agent.jpg';
             </div>
         );
     }
+}
 
 
 
