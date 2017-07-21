@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cardFinder from '../../Images/cardFinder.jpg';
 import {connect} from  'react-redux';
 
 class AccountBody extends Component {
@@ -18,13 +19,14 @@ class AccountBody extends Component {
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
-                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
-                    <div>Available balance</div>
+                    <div className="ABLTamount">${this.props.login.profile.map(this.accountBalance)}</div>
+                    <div className="ABLTtext">Available balance</div>
                   </div>
                 </div>
 
                 <div className="AccountBodyLeftBottom">
 
+                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
                   <div className="AccountBodyLeftBottomImg"></div>
 
                   <div className="AccountBodyLeftBottomText">

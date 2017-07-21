@@ -10,7 +10,7 @@ import RaisedButton from 'material-ui/RaisedButton';
  * You can also close this dialog by clicking outside the dialog, or with the 'Esc' key.
  */
 export default class TXButton extends Component {
-  
+
   state = {
     open: false,
   };
@@ -23,6 +23,7 @@ export default class TXButton extends Component {
     this.setState({open: false});
   };
 
+
   render() {
     const actions = [
       <FlatButton
@@ -32,6 +33,8 @@ export default class TXButton extends Component {
       />,
       <FlatButton
         label="Submit"
+        type="submit"
+        onClick={this.props.clickE}
         primary={true}
         keyboardFocused={true}
         onTouchTap={this.handleClose}
@@ -40,9 +43,9 @@ export default class TXButton extends Component {
 
     return (
       <div>
-        <RaisedButton label="Dialog" onTouchTap={this.handleOpen} />
+        <RaisedButton label="submit" onTouchTap={this.handleOpen} />
         <Dialog
-          title="Dialog With Actions"
+          title="do you want to submit?"
           actions={actions}
           modal={false}
           open={this.state.open}
