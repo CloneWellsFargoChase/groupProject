@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import sales_agent from '../../Images/sales_agent.jpg';
 import {connect} from  'react-redux';
 
 class AccountBody2 extends Component {
@@ -12,15 +13,16 @@ class AccountBody2 extends Component {
       return account;
     }
 
-    render() {
+    render(){
         return (
             <div className="AccountBodyRight">
 
               <div className="AccountBodyRightTop">
                 <div className="AccountBodyRightTopTop">
                   <div className="AccountBodyRightTopTop1">
-                    <div className="AccountBodyRightTopTop11">CHECKING ACCOUNT NUMBER : {this.props.login.profile.map(this.accountNumber)} </div>
-                    <div className="AccountBodyRightTopTop12">Things you can do v</div>
+                    <div className="AccountBodyRightTopTop11">TOTAL CHECKING <span className="ABRTT11span">(...Number)</span>
+                    </div>
+                    <div className="AccountBodyRightTopTop12">Things you can do</div>
                   </div>
                   <div className="AccountBodyRightTopTop2">
                     <div>Present balance</div>
@@ -38,11 +40,11 @@ class AccountBody2 extends Component {
                   <div>Transfer money</div>
                 </div>
                 <div className="AccountBodyRightTopBottom">
-                    <div>imgHere</div>
+                    <img className="ABRTBimage" src={ sales_agent } />
                     <div>
-                      <div>Let's Find the Right Mortgage For You</div>
+                      <div className="ABRTBtitle">Let's Find the Right Mortgage For You</div>
                       <div>Our home lending experts are here to help you find the best options.</div>
-                      <div>Learn More > </div>
+                      <div className="ABRTBbottom">Learn More > </div>
                     </div>
                 </div>
               </div>
@@ -50,33 +52,25 @@ class AccountBody2 extends Component {
               <div className="AccountBodyRightMid">
                 <div className="AccountBodyRightMidLeft">
                   <div className="AccountBodyRightMidLeftTrans">All Transactions</div>
-                  <div>Search > </div>
+                  <div className="ABRMLsearch">Search > </div>
                 </div>
                 <div className="AccountBodyRightMidRight">
-                  <div>I</div>
-                  <div>=</div>
-                  <div> | </div>
-                  <div>Prnt</div>
-                  <div>v</div>
+                  <div>Print</div>
                 </div>
               </div>
 
               <div className="AccountBodyRightBottom">
                 <div className="AccountBodyRightBottomHead">
-                  <div className="AccountBodyRightBottomHeadL">
                     <div>Date</div>
                     <div>Description</div>
-                  </div>
-                  <div className="AccountBodyRightBottomHeadR">
                     <div>Amount</div>
                     <div>Balance</div>
-                  </div>
                 </div>
                 <div className="AccountBodyRightBottomRepeat">
-                  <div>$Date</div>
-                  <div>$Description</div>
-                  <div>$Amount</div>
-                  <div>$Balance</div>
+                  <div>Jul 10, 2011</div>
+                  <div>Mc none of your business</div>
+                  <div>$700</div>
+                  <div>$200</div>
                 </div>
               </div>
             </div>
