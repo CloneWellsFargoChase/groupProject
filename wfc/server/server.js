@@ -7,7 +7,11 @@ const express = require('express'),
       cors = require('cors'),
       axios = require('axios'),
       port = 3007,
+<<<<<<< HEAD
+      config = require('../.config'),
+=======
       config = require('./.config'),
+>>>>>>> master
       controllerEmail = require('./controllersNode/controllerEmail'),
       forgotEmail = require('./controllersNode/forgotEmail'),
       { checkIfUserExists,
