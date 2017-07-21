@@ -18,8 +18,9 @@ const styles = {
   paperwidth: {
     borderRadius:'25px',
     textAlign:'center',
-    width: '40%',
-    height:'300px'
+    width: '80%',
+    height:'300px',
+    marginTop:'60px',
   },
   textfield:{
       marginRight:'30px'
@@ -93,7 +94,6 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
 
     render() {
         return (
-            <div>
                 <Paper zDepth={2} style={styles.paperwidth}>
                      <TextField
                         floatingLabelText="Transfer from"
@@ -136,7 +136,6 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
                     <br/>
                     <TXButton clickE={this.transactionSubmit}/>
                 </Paper>
-            </div>
         );
     }
 }

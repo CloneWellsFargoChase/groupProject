@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import sales_agent from '../../Images/sales_agent.jpg';
 
-export default class AccountBodyRight extends Component {
-    render() {
+    render(){
         return (
             <div className="AccountBodyRight">
 
@@ -14,13 +13,11 @@ export default class AccountBodyRight extends Component {
                     <div className="AccountBodyRightTopTop12">Things you can do</div>
                   </div>
                   <div className="AccountBodyRightTopTop2">
-                    <div>Available balance</div>
                     <div>Present balance</div>
                     <div>Debit card coverage</div>
                   </div>
                   <div className="AccountBodyRightTopTop22">
-                    <div>$</div>
-                    <div>$</div>
+                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Off</div>
                   </div>
                   <div className="AccountBodyRightTopTop3">Set up ></div>
@@ -67,4 +64,12 @@ export default class AccountBodyRight extends Component {
             </div>
         );
     }
+
+
+
+function mapStateToProps({login}){
+  return {login};
 }
+
+var AccountBodyRight  = connect(mapStateToProps)(AccountBody2);
+export default AccountBodyRight;

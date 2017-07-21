@@ -1,9 +1,19 @@
-import {FETCH_PROFILE} from '../Actions/userLogin';
+import {FETCH_PROFILE,LOGIN_SUCCESS,LOGIN_ERROR,LOG_OUT} from '../Actions/userLogin';
 
-export default function login(state=[],action){
+export default function login(state={
+    isAuthenticated: false,
+    profile:[],
+    error: null
+},action){
     switch(action.type){
         case FETCH_PROFILE:
-            return [...state,action.payload.data];
+            return {isAuthenticated:false,profile:action.payload.data,error:null};
+        case LOGIN_SUCCESS:
+             return {isAuthenticated:true,profile:action.payload.data,error:null};
+        case LOGIN_ERROR:
+            return {isAuthenticated:false,profile:[],error:true};
+        case LOG_OUT:
+            return {isAuthenticated:false,profile:[],error:false};
         default:
             return state;
     }
