@@ -5,6 +5,8 @@ import {bindActionCreators} from 'redux';
 import {createAccount} from '../../Actions/createAccount'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import logo from '../../Images/Icons/Header-icons/white-logo.svg'
+import chase from'../../Images/Icons/Header-icons/white-text.svg'
 import './SignUpView.css'
 
 class SignUpComponent extends Component {
@@ -81,6 +83,10 @@ class SignUpComponent extends Component {
  render() {
    return (
      <div className='signupMain'>
+       <span className="signup-header">
+          <img src={chase} alt="" className="signup-header-chase"/>
+          <img src={logo} alt="" className="signup-header-logo"/>
+       </span>
          <form className='signupfield' onSubmit={this.onFormSubmit}>
            <TextField
              onChange={this.firstNameChange}

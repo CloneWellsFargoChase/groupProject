@@ -1,6 +1,6 @@
 
-*{
-  /*border: 1px solid black;*/
+*, img{
+  /*border: 1px solid black !important;*/
 }
 .signupfield {
   display: flex;
@@ -28,6 +28,20 @@
   position: fixed;
   width: 100%;
   top: 0;
+}
+.signup-header{
+  
+  display: flex;
+  justify-content: center;
+
+}
+.signup-header-chase{
+  width: 23.1em;
+  height: 7em;
+}
+.signup-header-logo{
+  width: 8.1em;
+  height: 7.1em;
 }
 .signupMain {
   background: url("../../Images/rockjeep.jpg") no-repeat center center fixed;
