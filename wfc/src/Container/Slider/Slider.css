@@ -4,12 +4,12 @@
 
 .carouselContainer {
   width: 100vw;
-  height: 150px; }
+  height: 150px;
+  background-color: white; }
   .carouselContainer .itemContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    justify-content: center; }
     .carouselContainer .itemContainer .carouselImage {
       height: 75px;
       width: 75px; }

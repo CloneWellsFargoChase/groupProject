@@ -1,6 +1,18 @@
-.signupfield {
-  display: flex;
-  margin-top: 15vh;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;}
+.signupMain {
+  background: url("../../Images/rockjeep.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5%; }
+  .signupMain .signupfield {
+    background-color: white;
+    width: 30%;
+    height: 38em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
