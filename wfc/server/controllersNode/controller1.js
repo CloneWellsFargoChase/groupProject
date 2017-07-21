@@ -152,13 +152,21 @@ transactions: function(req, res){
 
 // end of xfer
 transfer: function(req, res, next){
+    let user_name = 'a';
+
+  console.log('155', req.body);
+
   let db = req.app.get('db')
   let toUserInfo = []
   let fromUserInfo = []
   let currentDate = moment().format('LL');
   // The FROM user info part of the function
   db.getUserInfo([
+<<<<<<< HEAD
     req.body.from_user_name
+=======
+  user_name
+>>>>>>> master
   ])
   .then((resp) => {
     fromUserInfo.push(resp[0].id);
@@ -184,6 +192,16 @@ transfer: function(req, res, next){
       res.status(200).send('Transaction Successful!')
     })
   })
+<<<<<<< HEAD
+=======
+  // perform xfer process
+  // check to make sure inputted username and email match an acct
+  // insert row into transactions (from acct)
+  // update bal in users table (from acct)
+  // take in username and dollar amount from the person and
+  // insert row into transactions (to acct)
+  // update bal in users table (to acct)
+>>>>>>> master
 },
 // end of xfer
 
