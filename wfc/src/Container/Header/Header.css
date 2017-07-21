@@ -44,10 +44,11 @@
   color: #fff;
   font-size: 2.425em;
   text-shadow: 0.5px 0.5px 5px #000;
-  width: 62em;
+  width: 70em;
   margin: auto;
   display: flex;
   justify-content: space-between;
+  margin-top: 0.3em;;
 
 }
 
@@ -57,47 +58,43 @@
   display: flex;
 }
 
-
-
-.dropdown:hover .header{
-display: none;
-}
-
 .dropdown:hover .dropdown-content {
     display: flex;
+    height: 13.2em;
     position: fixed;
     width: 119vw;
     top: 0; 
-    padding-top: 7em;
-    margin-left: -21em;
-    padding-left: 20em;
+    padding-top: 7.3em;
+    margin-left: -24em;
+    padding-left: 23em;
 }
 
 .dropdown-button {
    text-shadow: 0.5px 0.5px 5px #000;
     padding-top: 0px;
-     border: none; 
+    border: none; 
     color: white;
     background-color: inherit;
 }
 .dropdown-content {
-    height: 10em;
-    transition: transition height 2s;
-    display: none;
+    border: 1px solid black;
+    height: 0;
+    display: flex;
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index:-1;
     background-color: rgba(0,0,0,0.7);
+    top: -7em;
 }
 
 .dropdown-icon{
   margin: 0 auto;
-  width: 2em;
+  width: 2.5em;
   fill: pink !important;
 }
 .icon-text{
-  font-size: 0.7em;
+  font-size: 0.9em;
   padding-top:1.5em;
   margin: 0 auto;
   text-align: center;
@@ -106,9 +103,10 @@ display: none;
     opacity: 1;
 }
 .icon-well{
-  transition: opacity 1s ease-in;
-  opacity: 0;
-  width: 6em;
+  transition-timing-function: ease-in;
+  opacity:0;
+  transition: opacity 0.3s linear;
+  width: 6.7em;
   height: 1em;
   display:flex;
   flex-direction: column;
@@ -130,24 +128,62 @@ display: none;
 .header-right{
   display: flex;
   justify-content: space-between;
-  width: 15em;
+  width: 14.4em;
 
 }
 .magnifying-glass{
+  margin-top: -0.6em;
   width:1.5em;
   height: 2.2em;
 }
 .header-middle{
+  margin-left: 4em;
   height: 2em;
-  width: 9em;
+  width: 14em;
 }
 
 .chase-logo{
-  margin-top:-2.75em;
-  width: 2em;
+    margin-left: -0.7em;
+    margin-top: -0.87em;
+    width: 2.6em;
 }
 
 .chase-text{
-  margin-top: -2em;
-  width: 6em;
+    margin-top: -0.8em;
+    width: 9.7em;
+}
+.atm, .español{
+  margin-left: -1em;
+}
+
+#icon-1{
+  transition-delay: 0.1s;
+}
+#icon-2{
+  
+  transition-delay: 0.2s;
+}
+#icon-3{
+  transition-delay: 0.3s;
+}
+#icon-4{
+  transition-delay: 0.4s;
+}
+#icon-5{
+  transition-delay: 0.5s;
+}
+#icon-6{
+  transition-delay: 0.6s;
+}
+#icon-7{
+  transition-delay: 0.7s;
+}
+#icon-8{
+  transition-delay: 0.8s;
+}
+#icon-9{
+  transition-delay: 0.9s;
+}
+#icon-10{
+transition-delay: 1s
 }

@@ -1,5 +1,5 @@
   .bg> img{
-        width: 100vw;
+        width: 100%;
         position: absolute;
         top: 0;
         z-index: -10;
@@ -7,15 +7,15 @@
 .jumbo-container{
     width:100%;
     height: 32rem;
-    padding-left: 63.5em;
+    padding-left: 68%;
 }
 
 .login-box{
     
     margin-top: 6em;
-    padding-left: 3.8em;
+    padding-left: 2.7em;
     padding-top: 1em;
-    width: 36rem;
+    width: 33.4rem;
     height: 29rem;
     background-color: #f8f8f8;
     border-radius: 2%;
