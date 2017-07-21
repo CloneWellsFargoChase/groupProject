@@ -84,9 +84,7 @@ class SignUpComponent extends Component {
     return (
       <div>
         <div className="signup-header">
-          <div className="signup-logo">
-            <img src={logo} alt=""/>
-          </div>
+       
         </div>
         <form className='signupfield' onSubmit={this.onFormSubmit}>
           <TextField
