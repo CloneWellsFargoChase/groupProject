@@ -40,21 +40,23 @@ class LoginField extends Component{
 
     return(
       <div>
+        <h3 className="login-welcome">Welcome</h3>
         <form className="input-group" onSubmit={this.onFormSubmit}>
           <TextField
-              placeholder="Username"
-
-              onChange={this.handleUserChange}
-          />
+              placeholder="Username" onChange={this.handleUserChange}/>
           <br />
-          <TextField
-            placeholder="Password"
-            type="password"
-            onChange={this.handlePasswordChange}
-          />
+          <TextField placeholder="Password" type="password" onChange={this.handlePasswordChange}/>
           <br />
-          <RaisedButton type="submit" label="Sign in" primary={true} className="login-button"></RaisedButton>
-        </form>
+          <span>
+                <p1>
+                Remember me
+                </p1>    
+                <p2>
+                  Use token <br/>
+                </p2>
+          </span>
+          <RaisedButton type="submit" label="Sign in" primary={true} className="login-button"/>
+          </form>
       </div>
       );
   }
