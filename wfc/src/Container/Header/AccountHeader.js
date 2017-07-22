@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AccountHeader.css';
+import './AccountHeader.scss';
 import chaseL from '../../Images/chaseL.png';
 
 export default class AccountHeader extends Component {

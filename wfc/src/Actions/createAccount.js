@@ -6,8 +6,11 @@ export const NEW_USER = 'NEW_USER';
 
 export function createAccount(data){
     const request = axios.post(ROOT_URL,{
+        fName: data.firstName,
+        lName: data.lastName,
         userName: data.username,
-        password: data.password
+        password: data.password,
+        email: data.email
     })
 
     return (dispatch)=>{

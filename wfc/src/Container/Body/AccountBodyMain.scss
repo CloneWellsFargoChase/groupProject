@@ -71,17 +71,17 @@
   width: 90%;
   display: flex;
   background: white;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .AccountBodyLeftBottomImg {
-  padding: 3%;
-  height: 120px;
+  height: 140px;
   width: 100px;
 }
 
 .AccountBodyLeftBottomText {
-  margin-left: 7%;
-  margin-top: 5%;
+  margin-left: 1%;
 }
 
 .AccountBodyLeftBottomTextHead {
@@ -276,9 +276,9 @@
   border: 1px solid grey;
   padding-top: 1%;
   padding-bottom: 1%;
-  padding-left: 7%;
+  padding-left: 11%;
   padding-right: 4%;
-  width: 75%;
+  width: 90%;
   border-radius: 1px;
 }
 
@@ -293,7 +293,22 @@
   border-bottom: 1px solid grey;
   justify-content: space-around;
   color: grey;
-  /*margin-top: 1%;*/
+}
+
+.ABRBHdate {
+  margin-left: 4%;
+}
+
+.ABRBHdesc {
+  margin-left: 5%;
+}
+
+.ABRBHamount {
+  margin-left: 5%;
+}
+
+.ABRBHbal {
+  margin-right: 1%;
 }
 
 .AccountBodyRightBottomRepeat {

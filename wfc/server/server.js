@@ -7,7 +7,7 @@ const express = require('express'),
       cors = require('cors'),
       axios = require('axios'),
       port = 3007,
-      config = require('../.config'),
+      config = require('./.config'),
       controllerEmail = require('./controllersNode/controllerEmail'),
       forgotEmail = require('./controllersNode/forgotEmail'),
       { checkIfUserExists,
@@ -19,8 +19,10 @@ const express = require('express'),
         forgot,
         newCustomerTransInsert,
         reset,
+        hash
       } = require('./controllersNode/controller1'),
-      { dos } = require('./controllersNode/dos')
+      { dos } = require('./controllersNode/dos'),
+      bcrypt = require('bcryptjs');
 
 
 ////// MIDDLEWARE //////
@@ -82,6 +84,7 @@ app.post('/forgot', dos, forgot, forgotEmail.triggerEmail)
 //for testing purposes pass in username and email but that will be stored in sessions in the future
 //always pass in new password
 app.post('/reset', dos, reset, login)
+
 
 
 ////// LISTENING //////

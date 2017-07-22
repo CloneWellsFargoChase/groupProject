@@ -3,7 +3,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
 import AccountBodyLeft from './AccountBodyLeft';
 import AccountBodyRight from './AccountBodyRight';
-import './AccountBodyMain.css';
+import './AccountBodyMain.scss';
 import Transaction from '../Transaction/Transaction';
 
 const styles = {
@@ -37,7 +37,7 @@ export default class AccountBodyMain extends Component {
         slideIndex: value,
       });
     };
-    
+
     render() {
         return (
             <div>

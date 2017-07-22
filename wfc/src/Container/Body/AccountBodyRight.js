@@ -61,10 +61,10 @@ class AccountBody2 extends Component {
 
               <div className="AccountBodyRightBottom">
                 <div className="AccountBodyRightBottomHead">
-                    <div>Date</div>
-                    <div>Description</div>
-                    <div>Amount</div>
-                    <div>Balance</div>
+                    <div className="ABRBHdate">Date</div>
+                    <div className="ABRBHdesc">Description</div>
+                    <div className="ABRBHamount">Amount</div>
+                    <div className="ABRBHbal">Balance</div>
                 </div>
                 <div className="AccountBodyRightBottomRepeat">
                   <div>Jul 10, 2011</div>
