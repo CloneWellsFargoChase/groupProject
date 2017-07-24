@@ -24,13 +24,25 @@ class AccountBody2 extends Component {
     }
 
     componentDidMount() {
-      const ROOT_URL = 'http://localhost:3007/transactions';
-      console.log('28', this.props.login.profile[0].id);
-      axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
-        this.setState ({
-            things: resp.data
-        })
-        })
+// console.log('er', this.props.newUser.length);
+const ROOT_URL = 'http://localhost:3007/transactions';
+        if(this.props.newUser.length){
+
+          axios.get(`${ROOT_URL}?id=${this.props.newUser[0].id}`).then((resp) => {
+            this.setState ({
+                things: resp.data
+            })
+          })
+
+        } else {
+
+          axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
+            this.setState ({
+                things: resp.data
+            })
+          })
+
+        }
     }
 
 
@@ -106,8 +118,8 @@ class AccountBody2 extends Component {
     }
 }
 
-function mapStateToProps({login}){
-  return {login};
+function mapStateToProps({login, newUser}){
+  return {login, newUser};
 }
 
 

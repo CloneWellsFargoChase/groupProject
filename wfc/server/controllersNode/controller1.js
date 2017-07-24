@@ -106,6 +106,7 @@ newCustomerTransInsert: function(req, res, next){
 
 // login
 login: function(req, res, next){
+  console.log(req.body);
   if(req.body.userName){
     req.app.get('db').loginU(
         req.body.userName
@@ -120,11 +121,11 @@ login: function(req, res, next){
               res.status(200).send(r)
               next()
             } else {
-              res.status(200).send('user not found')
+              res.status(200).send('123user not found')
             }
           })
         } else {
-          res.status(200).send('user not found')
+          res.status(200).send('127user not found')
         }
       }, function(r){
         res.status(500).send('error')
