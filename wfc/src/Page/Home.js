@@ -3,7 +3,7 @@ import Header from '../Container/Header/HeaderView';
 import Jumbotron from '../Container/Jumbotron/JumbotronView';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import Slider from '../Container/Slider/SliderView'
+import SimpleSlider from '../Container/Slider/Slider';
 import Filler from '../Container/HomeFiller/HomeFillerView';
 import News from '../Container/News/News';
 import Footer from '../Container/Footer/FooterView';
@@ -24,8 +24,8 @@ class Home extends Component {
                 <div>
                     <Jumbotron />
                 </div>
-                <div className='spacing'>
-                    <Slider />
+                <div>
+                    <SimpleSlider />
                 </div>
                 <div>
                     <Filler />
