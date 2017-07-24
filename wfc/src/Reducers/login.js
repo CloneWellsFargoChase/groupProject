@@ -9,7 +9,7 @@ export default function login(state={
         case FETCH_PROFILE:
             return {isAuthenticated:false,profile:action.payload.data,error:null};
         case LOGIN_SUCCESS:
-             return {isAuthenticated:true,profile:action.payload.data,error:null};
+             return {isAuthenticated:true,...state};
         case LOGIN_ERROR:
             return {isAuthenticated:false,profile:[],error:true};
         case LOG_OUT:
