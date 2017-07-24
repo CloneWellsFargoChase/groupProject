@@ -1,21 +1,66 @@
-.signupMain {
-    background: url('../../Images/rockjeep.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 5%;
-    .signupfield {
-        background-color: white;
-        width: 30%;
-        height: 38em;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
+.signupfield {
+
+ display: flex;
+  margin-top: 30vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;}
+
+.signup-header {
+  z-index: 5;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  padding: 20px;
+  color: blue;
+  height: 11.4em;
+  font-size: 0.5em;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
+.signup-header{
+  
+ display: flex;
+  justify-content: center;
+
+}
+.signup-header> img{
+  margin-top: -1em
+}
+.signup-header-chase{
+  width: 23.1em;
+  height: 7em;
+}
+.signup-header-logo{
+width: 6.4em;
+  height: 7em;
+  margin-left: -2em
+}
+.signupMain {
+  background: url('../../Images/rockjeep.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 95vh;
+  width: 100vw;
+  padding-top: 5%;
+  }
+.signupMain .signupfield {
+  border-radius:1%;
+  background-color: white;
+  width: 30%;
+  height: 71%;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }

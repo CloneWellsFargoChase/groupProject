@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import sales_agent from '../../Images/sales_agent.jpg';
 import {connect} from  'react-redux';
+import axios from 'axios';
 
 class AccountBody2 extends Component {
 
@@ -12,6 +13,7 @@ class AccountBody2 extends Component {
       var account = data.account;
       return account;
     }
+
 
     render(){
         return (
@@ -78,11 +80,11 @@ class AccountBody2 extends Component {
     }
 }
 
-
-
 function mapStateToProps({login}){
+  console.log(login)
   return {login};
 }
+
 
 var AccountBodyRight  = connect(mapStateToProps)(AccountBody2);
 export default AccountBodyRight;
