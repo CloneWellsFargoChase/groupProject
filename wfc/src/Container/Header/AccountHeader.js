@@ -55,7 +55,6 @@ function mapDispatchToProps(dispatch){
 }
 
 function mapStateToProps({login}){
-  console.log({login})
   return {login};
 }
 
