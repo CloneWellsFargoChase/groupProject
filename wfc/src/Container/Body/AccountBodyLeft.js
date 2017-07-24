@@ -3,9 +3,9 @@ import cardFinder from '../../Images/cardFinder.jpg';
 import {connect} from  'react-redux';
 
 class AccountBody extends Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   accountBalance(data){
     let balance = data.balance;
