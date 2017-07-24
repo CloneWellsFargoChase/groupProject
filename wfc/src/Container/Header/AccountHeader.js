@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './AccountHeader.scss';
+import './AccountHeader.css';
 import chaseL from '../../Images/chaseL.png';
 import {Button,ButtonToolbar} from 'react-bootstrap';
 import {connect} from 'react-redux';
@@ -33,7 +33,7 @@ class HeadAccount extends Component {
             <div className="AccountHeaderParent">
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
-                  {this.props.login.profile.map(this.userName)}
+
                 </div>
                 <div className="AccountHeaderUpperCenter">
                   <img src={chaseL} />

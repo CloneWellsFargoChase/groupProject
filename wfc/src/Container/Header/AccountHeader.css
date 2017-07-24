@@ -1,0 +1,46 @@
+.AccountHeaderDiv {
+  /* border: 1px solid black; */
+  width: 800px;
+  height: 100px;
+  background: orange; }
+
+/* upper header */
+.AccountHeaderUpper {
+  height: 15vh;
+  background-image: url("../../Images/AccountHeaderUpperClouds1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white; }
+
+.AccountHeaderUpperLeft {
+  display: flex;
+  margin-left: 50px; }
+
+.AccountHeaderUpperCenter {
+  display: flex; }
+
+.AccountHeaderUpperRight {
+  display: flex; }
+
+/* upper header end */
+/* lower header */
+.AccountHeaderLower {
+  height: 40%;
+  background: #096DF7;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; }
+
+.AccountHeaderLower div {
+  margin-left: 1.5%;
+  color: white; }
+
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+  margin-right: 2em; }
+
+/* lower header end */

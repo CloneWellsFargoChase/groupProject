@@ -3,7 +3,7 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
 import AccountBodyLeft from './AccountBodyLeft';
 import AccountBodyRight from './AccountBodyRight';
-import './AccountBodyMain.scss';
+import './AccountBodyMain.css';
 import Transaction from '../Transaction/Transaction';
 
 const styles = {

@@ -5,10 +5,11 @@ const ROOT_URL = 'http://localhost:3007/newUser';
 export const NEW_USER = 'NEW_USER';
 
 export function createAccount(data){
+  console.log('8cA', data);
     const request = axios.post(ROOT_URL,{
-        fName: data.firstName,
-        lName: data.lastName,
-        userName: data.username,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        userName: data.userName,
         password: data.password,
         email: data.email
     })

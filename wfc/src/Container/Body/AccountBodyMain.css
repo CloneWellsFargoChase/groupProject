@@ -1,0 +1,254 @@
+.AccountBodyMainDiv {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #e7e7e7; }
+
+/* SIGN IN DATE*/
+.AccountBodyMainLastDate {
+  margin-left: 83%;
+  margin-top: 1%; }
+
+/* SIGN IN DATE end*/
+/* LEFT */
+.AccountBodyLeft {
+  width: 30.33%;
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1%; }
+
+.AccountBodyLeftTop {
+  border-top: 4px solid #096DF7;
+  border-top-color: #096DF7;
+  height: 25%;
+  width: 90%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3%;
+  box-shadow: 1px 3px 5px grey;
+  background: white; }
+
+.AccountBodyLeftTop div div {
+  display: flex;
+  justify-content: flex-end; }
+
+.ABLTamount {
+  font-weight: 400;
+  font-size: 150%; }
+
+.ABLTtext {
+  color: grey;
+  font-weight: lighter; }
+
+.AccountBodyLeftBottom {
+  padding: 3%;
+  height: 25%;
+  width: 90%;
+  display: flex;
+  background: white;
+  justify-content: space-around;
+  align-items: center; }
+
+.AccountBodyLeftBottomImg {
+  height: 140px;
+  width: 100px; }
+
+.AccountBodyLeftBottomText {
+  margin-left: 1%; }
+
+.AccountBodyLeftBottomTextHead {
+  font-weight: 500;
+  font-size: 145%; }
+
+.AccountBodyLeftBottomTextLink {
+  color: #096DF7; }
+
+/* LEFT end */
+/* RIGHT */
+.AccountBodyRight {
+  width: 68%;
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1%; }
+
+.AccountBodyRightTop {
+  height: 50%;
+  width: 100%;
+  border-top: 15px solid #096DF7;
+  border-top-color: #096DF7;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 3px 3px 5px grey;
+  border-radius: 2px; }
+
+.AccountBodyRightTopTop {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1%; }
+
+.AccountBodyRightTopTop1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3%; }
+
+.AccountBodyRightTopTop11 {
+  font-size: 150%; }
+
+.ABRTT11span {
+  font-size: 75%;
+  color: #096DF7; }
+
+.AccountBodyRightTopTop12 {
+  border: 2px solid #096DF7;
+  border-radius: 5px;
+  padding-left: 7%;
+  padding-right: 7%; }
+
+.AccountBodyRightTopTop2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: grey;
+  font-weight: lighter; }
+
+.AccountBodyRightTopTop2 div {
+  margin-right: 3%; }
+
+.AccountBodyRightTopTop22 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+
+.AccountBodyRightTopTop22 div {
+  margin-right: 10%;
+  margin-left: 3%;
+  font-weight: bold; }
+
+.AccountBodyRightTopTop3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #096DF7; }
+
+.AccountBodyRightTopMid {
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1%;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black; }
+
+.AccountBodyRightTopMid div {
+  /*border: 1px solid black;*/
+  border-radius: 5px;
+  background: #d7d7d7;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: .5%;
+  padding-bottom: .5%; }
+
+.AccountBodyRightTopBottom {
+  height: 350%;
+  display: flex; }
+
+.AccountBodyRightTopBottom div {
+  margin: 1%; }
+
+.ABRTBtitle {
+  font-size: 115%; }
+
+.ABRTBbottom {
+  color: #096DF7; }
+
+.ABRTBimage {
+  height: 100px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 1.5%; }
+
+.AccountBodyRightMid {
+  height: 5%;
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  border-top: 2px solid #096DF7;
+  background: white;
+  box-shadow: 3px 3px 5px grey; }
+
+.AccountBodyRightMidLeft {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.ABRMLsearch {
+  color: #096DF7;
+  margin-left: 5%;
+  width: 100px; }
+
+.AccountBodyRightMidRight {
+  margin-right: 2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #096DF7;
+  font-size: 120%; }
+
+.AccountBodyRightMidLeftTrans {
+  border: 1px solid grey;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 11%;
+  padding-right: 4%;
+  width: 90%;
+  border-radius: 1px; }
+
+.AccountBodyRightBottom {
+  width: 100%;
+  box-shadow: 3px 3px 5px grey;
+  background: white; }
+
+.AccountBodyRightBottomHead {
+  display: flex;
+  border-bottom: 1px solid grey;
+  justify-content: space-around;
+  color: grey; }
+
+.ABRBHdate {
+  margin-left: 4%; }
+
+.ABRBHdesc {
+  margin-left: 5%; }
+
+.ABRBHamount {
+  margin-left: 5%; }
+
+.ABRBHbal {
+  margin-right: 1%; }
+
+.AccountBodyRightBottomRepeat {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%; }
+
+/* RIGHT end */

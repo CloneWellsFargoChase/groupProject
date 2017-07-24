@@ -25,6 +25,7 @@ class AccountBody2 extends Component {
 
     componentDidMount() {
       const ROOT_URL = 'http://localhost:3007/transactions';
+      console.log('28', this.props.login.profile[0].id);
       axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
         this.setState ({
             things: resp.data
@@ -33,17 +34,17 @@ class AccountBody2 extends Component {
         })
     }
 
-    
+
     render(){
 
-      const transactionArray = this.state.things.map((e, i) => 
+      const transactionArray = this.state.things.map((e, i) =>
                       <div key={i} className="AccountBodyRightBottomRepeat">
                         <div>{e.date.substring(0,10)}</div>
                         <div>{e.description}</div>
                         <div>{e.amount}</div>
                         <div>{e.t_balance}</div>
                       </div>
-                  );``
+                  );
 
         return (
             <div className="AccountBodyRight">

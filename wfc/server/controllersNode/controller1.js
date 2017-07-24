@@ -11,7 +11,6 @@ module.exports = {
 
 // check if user exists
 checkIfUserExists: function(req, res, next){
-
   req.app.get('db').checkIfUserExists([
       req.body.userName,
       req.body.email
@@ -30,7 +29,6 @@ checkIfUserExists: function(req, res, next){
 
 // add a new user
 newUser: function(req, res, next){
-
     let accountNumber = Math.floor(Math.random() * 900000) + 100000;
     let startBal = 500;
 
@@ -54,14 +52,14 @@ newUser: function(req, res, next){
       bcrypt.genSalt(11, function(err, salt){
           err ? console.log(err) :
         bcrypt.hash(req.body.password, salt, function(er, hash){
-          er ? console.log(er) :
-          req.body.password = hash;
+          er ? console.log(er) : console.log('er');
+          req.body.p = hash;
 
           req.app.get('db').newUser([
-              req.body.fName,
-              req.body.lName,
+              req.body.firstName,
+              req.body.lastName,
               req.body.userName,
-              req.body.password,
+              req.body.p,
               req.body.email,
               accountNumber,
               startBal
@@ -86,7 +84,6 @@ newUser: function(req, res, next){
 
 // initial transaction insert
 newCustomerTransInsert: function(req, res, next){
-
       let startBal = 500;
       let message = 'welcome';
       let date = moment().format('LL');
@@ -114,14 +111,12 @@ login: function(req, res, next){
         req.body.userName
       ).then(function(r){
         if(r.length > 0){
-          console.log('db',r[0].password);
-          console.log('input', req.body.password);
-
           bcrypt.compare(
             req.body.password,
             r[0].password
           ).then(function(resp){
             if(resp === true){
+              console.log(r);
               res.status(200).send(r)
               next()
             } else {
@@ -182,8 +177,6 @@ transactions: function(req, res){
 
 // end of xfer
 transfer: function(req, res, next){
-
-  console.log('155', req.body);
 
   let db = req.app.get('db')
   let toUserInfo = []
