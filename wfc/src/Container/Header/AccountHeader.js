@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './AccountHeader.css';
-import chaseL from '../../Images/chaseL.png';
+import chaseL from '../../Images/Icons/Header-icons/white-logo.svg';
 
 export default class AccountHeader extends Component {
     render() {
