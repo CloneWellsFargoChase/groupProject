@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import {connect} from 'react-redux';
 import {withRouter,Redirect} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
-import {userLogin} from '../../Actions/userLogin';
+import {userLogin,loginSuccess} from '../../Actions/userLogin';
     
 class LoginField extends Component{
 
@@ -33,8 +33,20 @@ class LoginField extends Component{
       event.preventDefault();
       this.props.userLogin({username:this.state.username,password:this.state.password});
       this.setState({username:'',password:''});
-      return this.props.history.push({ pathname: '/account'});
+      
   }
+
+  componentWillReceiveProps(nextProps) {
+    console.log('nextprops:',nextProps);
+    if(nextProps.login.profile === 'user not found'){
+      return alert("wrong username or password!");
+    }
+    else if (Number.isInteger(nextProps.login.profile[0].account)){
+      this.props.loginSuccess();
+      return this.props.history.push({ pathname: '/account'});
+    }
+  }
+  
 
   render(){
 
@@ -63,7 +75,7 @@ class LoginField extends Component{
 }
 
 function mapDispatchToProps(dispatch){
-    return bindActionCreators({userLogin},dispatch);
+    return bindActionCreators({userLogin,loginSuccess},dispatch);
 }
 
 function mapStateToProps({login}){

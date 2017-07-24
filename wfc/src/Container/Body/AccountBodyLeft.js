@@ -8,7 +8,6 @@ class AccountBody extends Component {
   }
 
   accountBalance(data){
-    console.log(data)
     let balance = data.balance;
     return balance;
   }
