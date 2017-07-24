@@ -29,7 +29,6 @@ class AccountBody2 extends Component {
         this.setState ({
             things: resp.data
         })
-          console.log('eeee', this.state.things)
         })
     }
 
@@ -43,7 +42,7 @@ class AccountBody2 extends Component {
                         <div>{e.amount}</div>
                         <div>{e.t_balance}</div>
                       </div>
-                  );``
+                  );
 
         return (
             <div className="AccountBodyRight">
@@ -107,7 +106,6 @@ class AccountBody2 extends Component {
 }
 
 function mapStateToProps({login}){
-  console.log(login)
   return {login};
 }
 
