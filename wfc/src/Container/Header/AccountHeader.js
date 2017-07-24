@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './AccountHeader.css';
 import chaseL from '../../Images/Icons/Header-icons/white-logo.svg';
+import hamburger from '../../Images/Icons/Header-icons/hamburger.svg';
+import comment  from '../../Images/Icons/account-header-icons/add-comment.svg';
+import flag from '../../Images/Icons/account-header-icons/flag.svg';
+import magnify from '../../Images/Icons/Header-icons/magnifying-glass.svg';
+import user from '../../Images/Icons/account-header-icons/user.svg'
 
 export default class AccountHeader extends Component {
     render() {
@@ -8,17 +13,17 @@ export default class AccountHeader extends Component {
             <div className="AccountHeaderParent">
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
-                  <div>Ha</div>
-                  <div>Pl</div>
-                  <div>Fl</div>
+                  <img classname="account-header-icon" src={hamburger} alt="menu"/>
+                  <img classname="account-header-icon" src={comment} alt="comment"/>
+                  <img classname="account-header-icon" src={flag} alt="flag"/>
                 </div>
                 <div className="AccountHeaderUpperCenter">
-                  <img src={chaseL} />
+                  <img classname="account-header-icon" src={chaseL} />
                 </div>
                 <div className="AccountHeaderUpperRight">
-                  <div>Srch</div>
-                  <div>Prsn</div>
-                  <div>SignO</div>
+                    <img classname="account-header-icon" src={magnify} alt="search"/>
+                    <img classname="account-header-icon" src={user} alt="user"/>
+                    <button className="sign-out-tab">Sign out</button>
                 </div>
               </div>
             </div>
