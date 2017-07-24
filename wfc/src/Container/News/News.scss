@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+.newsWrapper {
+    width: 100vw;
+    background-color: #F3F0E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #newsTitle {
     background: #F3F0E9;
     height: 75px;
@@ -22,14 +31,16 @@
     padding: 2.5vw;
 
     .picTextContainer {
-        width: 33.333%;
-        height: 33.333%; 
+        // width: 33.333%;
+        // height: 33.333%; 
         // padding-top: -20px;
     
         img {
-            width: 95%;
+            // width: 95%;
+            // height: 80%;
         }
         p {
+            width:100%;
             height: 20%;
             text-align: left;
             font-size: 1.3em;

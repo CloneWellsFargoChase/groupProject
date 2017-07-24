@@ -43,7 +43,7 @@ massive(config.database).then(db => {
 
 
 // pass in from username and to username & email
-app.post('/transactions', transactions)
+app.get('/transactions', transactions)
 
 
 // pass in userName and email for target acct make sure amount is +
