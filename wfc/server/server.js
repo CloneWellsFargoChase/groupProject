@@ -7,7 +7,7 @@ const express = require('express'),
       cors = require('cors'),
       axios = require('axios'),
       port = 3007,
-      config = require('./config'),
+      config = require('./../.config'),
       controllerEmail = require('./controllersNode/controllerEmail'),
       forgotEmail = require('./controllersNode/forgotEmail'),
       { checkIfUserExists,
@@ -41,7 +41,7 @@ massive(config.database).then(db => {
 
 
 // pass in from username and to username & email
-app.post('/transactions', transactions)
+app.get('/transactions', transactions)
 
 
 // pass in userName and email for target acct make sure amount is +
