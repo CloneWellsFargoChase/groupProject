@@ -1,7 +1,6 @@
 //the App.js file will serve as a routing app
 
 import React, { Component } from 'react';
-import Slider from './Container/Slider/SliderView'
 import Jumbotron from './Container/Jumbotron/JumbotronView'
 
 import {Switch,Route} from 'react-router-dom';

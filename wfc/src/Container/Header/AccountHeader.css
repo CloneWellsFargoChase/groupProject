@@ -22,6 +22,7 @@
 
 .AccountHeaderUpperLeft {
   display: flex;
+  margin-left:50px;
 }
 
 .AccountHeaderUpperCenter {
@@ -51,4 +52,7 @@
   color: white;
 }
 
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+  margin-right:2em;
+}
 /* lower header end */
