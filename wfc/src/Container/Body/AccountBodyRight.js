@@ -5,6 +5,15 @@ import axios from 'axios';
 
 class AccountBody2 extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      things: []
+    }
+    // this.transactionInfo = this.transactionInfo.bind(this)
+  }
+
     accountBalance(data){
       let balance = data.balance;
       return balance;
@@ -14,8 +23,28 @@ class AccountBody2 extends Component {
       return account;
     }
 
+    componentDidMount() {
+      const ROOT_URL = 'http://localhost:3007/transactions';
+      axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
+        this.setState ({
+            things: resp.data
+        })
+          console.log('eeee', this.state.things)
+        })
+    }
 
+    
     render(){
+
+      const transactionArray = this.state.things.map((e, i) => 
+                      <div key={i} className="AccountBodyRightBottomRepeat">
+                        <div>{e.date.substring(0,10)}</div>
+                        <div>{e.description}</div>
+                        <div>{e.amount}</div>
+                        <div>{e.t_balance}</div>
+                      </div>
+                  );``
+
         return (
             <div className="AccountBodyRight">
 
@@ -68,11 +97,8 @@ class AccountBody2 extends Component {
                     <div>Amount</div>
                     <div>Balance</div>
                 </div>
-                <div className="AccountBodyRightBottomRepeat">
-                  <div>Jul 10, 2011</div>
-                  <div>Mc none of your business</div>
-                  <div>$700</div>
-                  <div>$200</div>
+                <div>
+                    {transactionArray}
                 </div>
               </div>
             </div>
