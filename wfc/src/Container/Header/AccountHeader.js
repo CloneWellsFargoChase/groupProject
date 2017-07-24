@@ -13,16 +13,17 @@ export default class AccountHeader extends Component {
             <div className="AccountHeaderParent">
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
-                  <img classname="account-header-icon" src={hamburger} alt="menu"/>
-                  <img classname="account-header-icon" src={comment} alt="comment"/>
-                  <img classname="account-header-icon" src={flag} alt="flag"/>
+                  <a href="#"><img classname="account-header-icon" src={hamburger} alt="menu"/></a>
+                  <a href="#"><img classname="account-header-icon" src={comment} alt="comment"/></a>
+                  <a href="#"><img classname="account-header-icon" src={flag} alt="flag"/></a>
                 </div>
                 <div className="AccountHeaderUpperCenter">
-                  <img classname="account-header-icon" src={chaseL} />
+                  
+                    <a href="/"><img className="account-header-icon" src={chaseL} /></a>
                 </div>
                 <div className="AccountHeaderUpperRight">
-                    <img classname="account-header-icon" src={magnify} alt="search"/>
-                    <img classname="account-header-icon" src={user} alt="user"/>
+                    <a href="#"><img classname="account-header-icon" src={magnify} alt="search"/></a>
+                    <a href="#"> <img classname="account-header-icon" src={user} alt="user"/></a>
                     <button className="sign-out-tab">Sign out</button>
                 </div>
               </div>

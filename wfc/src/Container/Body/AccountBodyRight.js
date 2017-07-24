@@ -22,7 +22,7 @@ class AccountBody2 extends Component {
                   <div className="AccountBodyRightTopTop1">
                     <div className="AccountBodyRightTopTop11">TOTAL CHECKING <span className="ABRTT11span">(...Number)</span>
                     </div>
-                    <div className="AccountBodyRightTopTop12">Things you can do</div>
+                    <a href="#" className="AccountBodyRightTopTop12">Things you can do</a>
                   </div>
                   <div className="AccountBodyRightTopTop2">
                     <div>Present balance</div>
@@ -32,19 +32,19 @@ class AccountBody2 extends Component {
                     <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Off</div>
                   </div>
-                  <div className="AccountBodyRightTopTop3">Set up ></div>
+                  <a href="#" className="AccountBodyRightTopTop3">Set up ></a>
                 </div>
                 <div className="AccountBodyRightTopMid">
-                  <div>Statements</div>
-                  <div>Paperless</div>
-                  <div>Transfer money</div>
+                  <button href="#">Statements</button>
+                  <button href="#">Paperless</button>
+                  <button href="#">Transfer money</button>
                 </div>
                 <div className="AccountBodyRightTopBottom">
                     <img className="ABRTBimage" src={ sales_agent } />
                     <div>
                       <div className="ABRTBtitle">Let's Find the Right Mortgage For You</div>
                       <div>Our home lending experts are here to help you find the best options.</div>
-                      <div className="ABRTBbottom">Learn More > </div>
+                      <a href="#" className="ABRTBbottom">Learn More > </a>
                     </div>
                 </div>
               </div>
@@ -52,10 +52,10 @@ class AccountBody2 extends Component {
               <div className="AccountBodyRightMid">
                 <div className="AccountBodyRightMidLeft">
                   <div className="AccountBodyRightMidLeftTrans">All Transactions</div>
-                  <div className="ABRMLsearch">Search > </div>
+                  <a href="#" className="ABRMLsearch">Search > </a>
                 </div>
                 <div className="AccountBodyRightMidRight">
-                  <div>Print</div>
+                  <a href="#">Print</a>
                 </div>
               </div>
 

@@ -26,7 +26,7 @@ class AccountBody extends Component {
 
                 <div className="AccountBodyLeftBottom">
 
-                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
+                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" alt="card finder"/>
                   <div className="AccountBodyLeftBottomImg"></div>
 
                   <div className="AccountBodyLeftBottomText">
@@ -34,7 +34,7 @@ class AccountBody extends Component {
                     <div>
                     In just 2 steps, find the card that fits your needs.
                     </div>
-                    <div className="AccountBodyLeftBottomTextLink">Find your card > </div>
+                    <a href="#" className="AccountBodyLeftBottomTextLink">Find your card > </a>
                   </div>
 
                 </div>
