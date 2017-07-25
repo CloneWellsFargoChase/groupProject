@@ -65,8 +65,7 @@ button.sign-out-tab{
     background-color: rgba(0,0,0,0.4) !important;
     border-radius: 6%;
     padding: 0.5em 1em 0.5em 1em;
-    
-
+}
 .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
   margin-right:2em;
 }
