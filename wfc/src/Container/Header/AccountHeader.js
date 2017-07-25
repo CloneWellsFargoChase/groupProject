@@ -6,7 +6,6 @@ import comment  from '../../Images/Icons/account-header-icons/add-comment.svg';
 import flag from '../../Images/Icons/account-header-icons/flag.svg';
 import magnify from '../../Images/Icons/Header-icons/magnifying-glass.svg';
 import user from '../../Images/Icons/account-header-icons/user.svg'
-import {Button,ButtonToolbar} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {withRouter,Redirect} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
@@ -53,10 +52,7 @@ class HeadAccount extends Component {
 
                     <a href="#"><img className="account-header-icon" src={magnify} alt="search"/></a>
                     <a href="#"> <img className="account-header-icon" src={user} alt="user"/></a>
-                    <button className="sign-out-tab">Sign out</button>
-                  <ButtonToolbar>
-                    <Button bsStyle="danger" type="submit" onClick={this.onLogout}>Logout</Button>
-                  </ButtonToolbar>
+                    <button className="sign-out-tab" type="submit" onClick={this.onLogout}>Sign out</button>
                 </div>
               </div>
             </div>

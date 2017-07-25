@@ -15,7 +15,6 @@ class AccountBody extends Component {
     render(){
         return (
             <div className="AccountBodyLeft">
-
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
@@ -23,16 +22,9 @@ class AccountBody extends Component {
                     <div className="ABLTtext">Available balance</div>
                   </div>
                 </div>
-
                 <div className="AccountBodyLeftBottom">
-
-<<<<<<< HEAD
                   <img src={ cardFinder } className="AccountBodyLeftBottomImg" alt="card finder"/>
                   <div className="AccountBodyLeftBottomImg"></div>
-=======
-                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
->>>>>>> master
-
                   <div className="AccountBodyLeftBottomText">
                     <div className="AccountBodyLeftBottomTextHead">The quick & simple card finder</div>
                     <div>
@@ -40,9 +32,7 @@ class AccountBody extends Component {
                     </div>
                     <a href="#" className="AccountBodyLeftBottomTextLink">Find your card > </a>
                   </div>
-
                 </div>
-
             </div>
         );
     }
