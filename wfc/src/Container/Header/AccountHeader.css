@@ -22,6 +22,7 @@
 
 .AccountHeaderUpperLeft {
   display: flex;
+  margin-left:50px;
 }
 
 .AccountHeaderUpperCenter {
@@ -54,6 +55,7 @@
   color: white;
 }
 
+
 .AccountHeaderUpperLeft img, .AccountHeaderUpperRight img {
     width: 5em;
     height: 2em;
@@ -64,5 +66,8 @@ button.sign-out-tab{
     border-radius: 6%;
     padding: 0.5em 1em 0.5em 1em;
     
+
+.btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
+  margin-right:2em;
 }
 /* lower header end */

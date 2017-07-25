@@ -23,10 +23,12 @@ const styles = {
     marginTop:'60px',
   },
   textfield:{
+    textAlign:'center',
       marginRight:'30px'
   },
   textFieldMemo:{
-      width:'40%'
+      width:'40%',
+      textAlign: 'center'
   }
 };
 
@@ -111,7 +113,7 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
                     />
                     <br/>
                     <TextField
-                        floatingLabelText="Amount$"
+                        floatingLabelText="Amount $"
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
