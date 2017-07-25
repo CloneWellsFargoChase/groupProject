@@ -1,6 +1,7 @@
 ////// REQUIRED //////
 const axios = require('axios'),
-      moment =  require('moment')
+      moment =  require('moment'),
+      bcrypt = require('bcryptjs');
 
 
 ////// EXPORTS //////
@@ -10,7 +11,6 @@ module.exports = {
 
 // check if user exists
 checkIfUserExists: function(req, res, next){
-
   req.app.get('db').checkIfUserExists([
       req.body.userName,
       req.body.email
@@ -29,14 +29,8 @@ checkIfUserExists: function(req, res, next){
 
 // add a new user
 newUser: function(req, res, next){
-
     let accountNumber = Math.floor(Math.random() * 900000) + 100000;
     let startBal = 500;
-    console.log(
-      'userName', req.body.userName,
-      'password', req.body.password,
-      'email', req.body.email
-    );
 
   if(
       req.body.userName.length > 5 &&
@@ -54,21 +48,32 @@ newUser: function(req, res, next){
       req.body.email.includes('@') &&
       req.body.email.includes('.com')
     ){
-    req.app.get('db').newUser([
-        req.body.fName,
-        req.body.lName,
-        req.body.userName,
-        req.body.password,
-        req.body.email,
-        accountNumber,
-        startBal
-      ]).then(function(r){
-          req.body.userId = r[0].id;
-          next();
-        }, function(rej){
-          console.log('69', rej);
-        res.status(500).send('error')
+
+      bcrypt.genSalt(11, function(err, salt){
+          err ? console.log(err) :
+        bcrypt.hash(req.body.password, salt, function(er, hash){
+          er ? console.log(er) : console.log('er');
+          req.body.p = hash;
+
+          req.app.get('db').newUser([
+              req.body.firstName,
+              req.body.lastName,
+              req.body.userName,
+              req.body.p,
+              req.body.email,
+              accountNumber,
+              startBal
+            ]).then(function(r){
+                req.body.userId = r[0].id;
+                next();
+              }, function(rej){
+                console.log('69', rej);
+              res.status(500).send('error')
+            })
+
+        })
       })
+
   } else {
     res.status(400).send('check input requirements')
   }
@@ -79,7 +84,6 @@ newUser: function(req, res, next){
 
 // initial transaction insert
 newCustomerTransInsert: function(req, res, next){
-
       let startBal = 500;
       let message = 'welcome';
       let date = moment().format('LL');
@@ -102,15 +106,49 @@ newCustomerTransInsert: function(req, res, next){
 
 // login
 login: function(req, res, next){
-
+  console.log(req.body);
   if(req.body.userName){
-    req.app.get('db').loginU([
-        req.body.userName,
-        req.body.password
-      ]).then(function(r){
+    req.app.get('db').loginU(
+        req.body.userName
+      ).then(function(r){
         if(r.length > 0){
-          res.status(200).send(r)
-          next()
+          bcrypt.compare(
+            req.body.password,
+            r[0].password
+          ).then(function(resp){
+            if(resp === true){
+              console.log(r);
+              res.status(200).send(r)
+              next()
+            } else {
+              res.status(200).send('123user not found')
+            }
+          })
+        } else {
+          res.status(200).send('127user not found')
+        }
+      }, function(r){
+        res.status(500).send('error')
+      })
+  } else {
+    req.app.get('db').loginE(
+        req.body.email
+      ).then(function(r){
+        if(r.length > 0){
+          console.log('er',r[0].password);
+          console.log('rr', req.body.password);
+
+          bcrypt.compare(
+            req.body.password,
+            r[0].password
+          ).then(function(err, resp){
+            if(resp === true){
+              res.status(200).send(r)
+              next()
+            } else {
+              res.status(200).send('user not found')
+            }
+          })
         } else {
           res.status(200).send('user not found')
         }
@@ -118,21 +156,8 @@ login: function(req, res, next){
           console.log('74', r);
         res.status(500).send('error')
       })
-  } else {
-    req.app.get('db').loginE([
-        req.body.email,
-        req.body.password
-      ]).then(function(r){
-        if(r.length > 0){
-          res.status(200).send(r)
-          next()
-        } else {
-          res.status(200).send('user not found')
-        }
-      }, function(r){
-        console.log('74', r);
-        res.status(500).send('error')
-      })
+
+
   }
 },
 // end of login
@@ -153,8 +178,6 @@ transactions: function(req, res){
 
 // end of xfer
 transfer: function(req, res, next){
-
-  console.log('155', req.body);
 
   let db = req.app.get('db')
   let toUserInfo = []
@@ -255,17 +278,28 @@ reset: function(req, res, next){
     req.body.password.match(/1|2|3|4|5|6|7|8|9/g) &&
     req.body.password.toLowerCase().match(/[a-z]/)
   ){
-    req.app.get('db').resetPassword([
-      req.body.userName,
-      req.body.password
-    ]).then(function(r){
-      next()
+
+    bcrypt.genSalt(11, function(err, salt){
+        err ? console.log(err) :
+      bcrypt.hash(req.body.password, salt, function(er, hash){
+        er ? console.log(er) :
+        req.body.pHash = hash;
+
+        req.app.get('db').resetPassword([
+          req.body.userName,
+          req.body.pHash
+        ]).then(function(r){
+          next()
+        })
+
+      })
     })
+
   } else {
     res.status(400).send('check you input')
   }
 
-}
+},
 // end reset link
 
 

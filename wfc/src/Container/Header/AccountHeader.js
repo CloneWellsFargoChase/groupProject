@@ -33,7 +33,7 @@ class HeadAccount extends Component {
             <div className="AccountHeaderParent">
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
-                  {this.props.login.profile.map(this.userName)}
+
                 </div>
                 <div className="AccountHeaderUpperCenter">
                   <img src={chaseL} />

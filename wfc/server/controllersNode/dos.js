@@ -3,7 +3,6 @@ const moment =  require('moment');
 
 module.exports = {
   dos: function(req, res, next){
-
       let ip = req.ip.slice(7,20);
       let date = moment().format('h:mm:ss');
     req.app.get('db').insertIp([ip, date]);
@@ -16,8 +15,7 @@ module.exports = {
       r.map((i) => allIps.push(i.ip));
         let counter = 0;
       allIps.map((i) => {if(i == ip) counter += 1});
-        console.log(counter);
-      counter > 100 ? res.status(400).send('you shall not pass') : next();
+      counter > 300 ? res.status(400).send('you shall not pass') : next();
     })
   }
 

@@ -1,9 +1,9 @@
 const nMailer = require('nodemailer'),
-      config = require('../config');
+      config = require('../.config');
+
 
 module.exports = {
   triggerEmail: function(req, res){
-      console.log('6', req.body.email);
 
     let transporter = nMailer.createTransport({
       service: 'gmail',
@@ -30,7 +30,6 @@ module.exports = {
         return console.log(error);
       } else {
         console.log('message sent');
-        console.log(info);
       }
     })
   }

@@ -37,7 +37,7 @@ export default class AccountBodyMain extends Component {
         slideIndex: value,
       });
     };
-    
+
     render() {
         return (
             <div>
