@@ -3,9 +3,9 @@ import cardFinder from '../../Images/cardFinder.jpg';
 import {connect} from  'react-redux';
 
 class AccountBody extends Component {
-  constructor(props){
-    super(props);
-  }
+  // constructor(props){
+  //   super(props);
+  // }
 
   accountBalance(data){
     let balance = data.balance;
@@ -26,8 +26,12 @@ class AccountBody extends Component {
 
                 <div className="AccountBodyLeftBottom">
 
+<<<<<<< HEAD
                   <img src={ cardFinder } className="AccountBodyLeftBottomImg" alt="card finder"/>
                   <div className="AccountBodyLeftBottomImg"></div>
+=======
+                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
+>>>>>>> master
 
                   <div className="AccountBodyLeftBottomText">
                     <div className="AccountBodyLeftBottomTextHead">The quick & simple card finder</div>

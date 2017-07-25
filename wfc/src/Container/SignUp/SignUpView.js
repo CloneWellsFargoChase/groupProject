@@ -10,7 +10,7 @@ import chase from'../../Images/Icons/Header-icons/white-text.svg'
 import './SignUpView.css'
 
 class SignUpComponent extends Component {
- 
+
  constructor(props){
    super(props);
    this.state = {
@@ -27,7 +27,7 @@ class SignUpComponent extends Component {
    this.passwordChange = this.passwordChange.bind(this)
    this.onFormSubmit = this.onFormSubmit.bind(this)
 
-   
+
  }
 
  firstNameChange(event) {

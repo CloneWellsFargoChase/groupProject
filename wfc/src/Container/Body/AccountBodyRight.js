@@ -24,18 +24,31 @@ class AccountBody2 extends Component {
     }
 
     componentDidMount() {
-      const ROOT_URL = 'http://localhost:3007/transactions';
-      axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
-        this.setState ({
-            things: resp.data
-        })
-        })
+// console.log('er', this.props.newUser.length);
+const ROOT_URL = 'http://localhost:3007/transactions';
+        if(this.props.newUser.length){
+
+          axios.get(`${ROOT_URL}?id=${this.props.newUser[0].id}`).then((resp) => {
+            this.setState ({
+                things: resp.data
+            })
+          })
+
+        } else {
+
+          axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
+            this.setState ({
+                things: resp.data
+            })
+          })
+
+        }
     }
 
-    
+
     render(){
 
-      const transactionArray = this.state.things.map((e, i) => 
+      const transactionArray = this.state.things.map((e, i) =>
                       <div key={i} className="AccountBodyRightBottomRepeat">
                         <div>{e.date.substring(0,10)}</div>
                         <div>{e.description}</div>
@@ -91,10 +104,10 @@ class AccountBody2 extends Component {
 
               <div className="AccountBodyRightBottom">
                 <div className="AccountBodyRightBottomHead">
-                    <div>Date</div>
-                    <div>Description</div>
-                    <div>Amount</div>
-                    <div>Balance</div>
+                    <div className="ABRBHdate">Date</div>
+                    <div className="ABRBHdesc">Description</div>
+                    <div className="ABRBHamount">Amount</div>
+                    <div className="ABRBHbal">Balance</div>
                 </div>
                 <div>
                     {transactionArray}
@@ -105,8 +118,8 @@ class AccountBody2 extends Component {
     }
 }
 
-function mapStateToProps({login}){
-  return {login};
+function mapStateToProps({login, newUser}){
+  return {login, newUser};
 }
 
 

@@ -39,12 +39,11 @@ class HeadAccount extends Component {
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
 
-                  <a href="#"><img classname="account-header-icon" src={hamburger} alt="menu"/></a>
-                  <a href="#"><img classname="account-header-icon" src={comment} alt="comment"/></a>
-                  <a href="#"><img classname="account-header-icon" src={flag} alt="flag"/></a>
+                  <a href="#"><img className="account-header-icon" src={hamburger} alt="menu"/></a>
+                  <a href="#"><img className="account-header-icon" src={comment} alt="comment"/></a>
+                  <a href="#"><img className="account-header-icon" src={flag} alt="flag"/></a>
 
                   {this.props.login.profile.map(this.userName)}
-
                 </div>
                 <div className="AccountHeaderUpperCenter">
                   
@@ -52,8 +51,8 @@ class HeadAccount extends Component {
                 </div>
                 <div className="AccountHeaderUpperRight">
 
-                    <a href="#"><img classname="account-header-icon" src={magnify} alt="search"/></a>
-                    <a href="#"> <img classname="account-header-icon" src={user} alt="user"/></a>
+                    <a href="#"><img className="account-header-icon" src={magnify} alt="search"/></a>
+                    <a href="#"> <img className="account-header-icon" src={user} alt="user"/></a>
                     <button className="sign-out-tab">Sign out</button>
                   <ButtonToolbar>
                     <Button bsStyle="danger" type="submit" onClick={this.onLogout}>Logout</Button>
