@@ -1,3 +1,3 @@
 select * 
 from transactions
-where userid = $1
+where userid = $1;

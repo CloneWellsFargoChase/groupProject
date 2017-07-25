@@ -1,5 +1,5 @@
 const nMailer = require('nodemailer'),
-      config = require('../../.config');
+      config = require('../config');
 
 module.exports = {
   triggerEmail: function(req, res){

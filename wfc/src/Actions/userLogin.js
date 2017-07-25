@@ -23,10 +23,9 @@ export function userLogin(data){
     };
 }
 
-export function loginSuccess(data){
+export function loginSuccess(){
     return {
         type:LOGIN_SUCCESS,
-        payload:data
     }
 }
 
