@@ -112,15 +112,11 @@
   font-size: 75%;
   color: #096DF7; }
 
-.AccountBodyRightTopTop12{
-  float: left;
+.AccountBodyRightTopTop12 {
   border: 2px solid #096DF7;
   border-radius: 5px;
   padding-left: 7%;
-  padding-right: 7%;
-  color: black;
-}
-
+  padding-right: 7%; }
 
 .AccountBodyRightTopTop2 {
   display: flex;
@@ -157,7 +153,7 @@
   border-top: 1px dotted black;
   border-bottom: 1px dotted black; }
 
-.AccountBodyRightTopMid button {
+.AccountBodyRightTopMid div {
   /*border: 1px solid black;*/
   border-radius: 5px;
   background: #d7d7d7;
@@ -255,7 +251,4 @@
   justify-content: space-around;
   margin: 2%; }
 
-.slider-tab{
-  background-color:#096DF7 !important;
-}
 /* RIGHT end */

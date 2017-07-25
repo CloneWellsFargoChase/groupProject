@@ -6,13 +6,8 @@
 
 /* upper header */
 .AccountHeaderUpper {
-/*<<<<<<< HEAD*/
-  height: 4.4em;
-  background-image: url('../../Images/AccountHeaderUpperClouds1.jpg');
-/*=======
   height: 15vh;
   background-image: url("../../Images/AccountHeaderUpperClouds1.jpg");
->>>>>>> master*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,15 +21,7 @@
   margin-left: 50px; }
 
 .AccountHeaderUpperCenter {
-/*<<<<<<< HEAD*/
-  display: flex;
-}
-.account-header-icon{
-    width: 3em;
-}
-/*=======
   display: flex; }
->>>>>>> master*/
 
 .AccountHeaderUpperRight {
   display: flex; }
@@ -53,17 +40,6 @@
   margin-left: 1.5%;
   color: white; }
 
-
-.AccountHeaderUpperLeft img, .AccountHeaderUpperRight img {
-    width: 5em;
-    height: 2em;
-}
-button.sign-out-tab{
-    margin-right: 1em;
-    background-color: rgba(0,0,0,0.4) !important;
-    border-radius: 7px;
-    padding: 0.5em 1em 0.5em 1em;
-}
 .btn-toolbar > .btn, .btn-toolbar > .btn-group, .btn-toolbar > .input-group {
   margin-right: 2em; }
 
