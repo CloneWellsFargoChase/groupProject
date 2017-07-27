@@ -7,25 +7,7 @@ import text from '../../Images/Icons/Header-icons/white-text.svg';
 import logo from '../../Images/Icons/Header-icons/white-logo.svg';
 import './Header.css';
 
-// const styles = { 
-//       transition: 'all 1s ease-in'
-// };
-
 class Header extends Component {
-
-//   constructor(){
-//     super();
-//     this.state = {
-//       opacity:0
-//     };
-//   }
-
-//   onShow()
-//   {
-//     this.setState({
-//       opacity: 1
-//     })
-// }
 
   render() {
     return (
@@ -36,7 +18,6 @@ class Header extends Component {
                 <img src={hamburger} className="hamburger-bars" href="#" />
                  <div className="dropdown">
                  <button className="dropdown-button" 
-                 /*onHover={this.onShow(this)} */
                  >
                     <div className="dropdown-text"> 
                       Explore products

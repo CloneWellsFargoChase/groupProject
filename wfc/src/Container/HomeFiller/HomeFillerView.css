@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 .filler-wrapper{
   width: 100vw;
-  
+  margin-top: 3em;
 }
 .filler {
   width: 80%;
