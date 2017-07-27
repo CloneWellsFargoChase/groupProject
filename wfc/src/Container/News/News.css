@@ -10,25 +10,28 @@
   background: #F3F0E9;
   height: 75px;
   width: 100vw;
-  padding-left: 2.2%;
-  padding-top: 2.2%; }
+  margin: 2.2%; }
   #newsTitle p {
     font-size: 3.125em;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 100; }
+    font-weight: 100 !important; }
 
 .newsContainer {
   background: #F3F0E9;
-  width: 100vw;
+  width: 102vw;
   height: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  padding: 2.5vw; }
-  .newsContainer .picTextContainer p {
-    width: 100%;
-    height: 20%;
-    text-align: left;
-    font-size: 1.3em;
-    font-family: 'Open Sans', sans-serif; }
+  flex-wrap: wrap; }
+  .newsContainer .picTextContainer {
+    width: 30%;
+    height: 33%; }
+    .newsContainer .picTextContainer img {
+      width: 95%; }
+    .newsContainer .picTextContainer p {
+      width: 100%;
+      height: 20%;
+      text-align: left;
+      font-size: 1.3em;
+      font-family: 'Open Sans', sans-serif; }

@@ -44,7 +44,6 @@ class AccountBody extends Component {
         const t_balance = this.state.tbalance;
         return (
             <div className="AccountBodyLeft">
-
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
@@ -52,21 +51,17 @@ class AccountBody extends Component {
                     <div className="ABLTtext">Available balance</div>
                   </div>
                 </div>
-
                 <div className="AccountBodyLeftBottom">
-
-                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" />
-
+                  <img src={ cardFinder } className="AccountBodyLeftBottomImg" alt="card finder"/>
+                  <div className="AccountBodyLeftBottomImg"></div>
                   <div className="AccountBodyLeftBottomText">
                     <div className="AccountBodyLeftBottomTextHead">The quick & simple card finder</div>
                     <div>
                     In just 2 steps, find the card that fits your needs.
                     </div>
-                    <div className="AccountBodyLeftBottomTextLink">Find your card > </div>
+                    <a href="#" className="AccountBodyLeftBottomTextLink">Find your card > </a>
                   </div>
-
                 </div>
-
             </div>
         );
     }

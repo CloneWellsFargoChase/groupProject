@@ -46,8 +46,8 @@ class AccountBodyM extends Component {
                 onChange={this.handleChange}
                 value={this.state.slideIndex}
               >
-                <Tab label="Account" value={0} />
-                <Tab label="Transfer" value={1} />
+                <Tab className="slider-tab account" label="Account" value={0} />
+                <Tab className="slider-tab transfer" label="Transfer" value={1} />
               </Tabs>
               <SwipeableViews
                 index={this.state.slideIndex}
@@ -63,7 +63,7 @@ class AccountBodyM extends Component {
                   </div>
                 </div>
                 <div style={styles.txslide} className="tx-div">
-                  <Transaction/>
+                  <Transaction handleChange={this.handleChange}/>
                 </div>
                </SwipeableViews>
             </div>

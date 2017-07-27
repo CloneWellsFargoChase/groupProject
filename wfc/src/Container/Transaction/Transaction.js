@@ -18,15 +18,18 @@ const styles = {
   paperwidth: {
     borderRadius:'25px',
     textAlign:'center',
-    width: '80%',
-    height:'300px',
-    marginTop:'60px',
+    width: '90%',
+    height:'310px',
+    marginTop:'130px',
+    marginLeft:'60px'
   },
   textfield:{
+    textAlign:'center',
       marginRight:'30px'
   },
   textFieldMemo:{
-      width:'40%'
+      width:'50%',
+      textAlign: 'center'
   }
 };
 
@@ -90,6 +93,8 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
         memo: this.state.memo
       });
     console.log(this.state);
+
+    this.props.handleChange(0);
   }
 
     render() {
@@ -111,7 +116,7 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
                     />
                     <br/>
                     <TextField
-                        floatingLabelText="Amount$"
+                        floatingLabelText="Amount $"
                         floatingLabelStyle={styles.floatingLabelStyle}
                         floatingLabelFocusStyle={styles.floatingLabelFocusStyle}
                         style={styles.textfield}
