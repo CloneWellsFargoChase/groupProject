@@ -56,7 +56,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                         <div>{e.t_balance}</div>
                       </div>
                   );
-
+        const balance = this.state.things.slice(-1).pop();
         return (
             <div className="AccountBodyRight">
 
@@ -72,7 +72,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                     <div>Debit card coverage</div>
                   </div>
                   <div className="AccountBodyRightTopTop22">
-                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
+                    <div>{`${balance}`}</div>
                     <div>Off</div>
                   </div>
                   <div className="AccountBodyRightTopTop3">Set up ></div>

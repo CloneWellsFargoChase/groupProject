@@ -1,25 +1,54 @@
 import React, { Component } from 'react';
 import cardFinder from '../../Images/cardFinder.jpg';
 import {connect} from  'react-redux';
+import axios from 'axios';
 
 class AccountBody extends Component {
-  // constructor(props){
-  //   super(props);
-  // }
+  constructor(props){
+    super(props);
+    this.state = {
+        balance: [],
+        tbalance:{}
+      };
 
-  accountBalance(data){
-    let balance = data.balance;
-    return balance;
+      this.accountTBalance=this.accountTBalance.bind(this);
   }
 
+
+  componentDidMount(){
+    const ROOT_URL = 'http://localhost:3007/transactions';
+    if(this.props.newUser.length){
+        axios.get(`${ROOT_URL}?id=${this.props.newUser[0].id}`).then((resp) => {
+        this.setState ({
+          balance: resp.data
+        })
+        this.accountTBalance(this.state.balance);
+      })
+    }
+      else {
+          axios.get(`${ROOT_URL}?id=${this.props.login.profile[0].id}`).then((resp) => {
+            this.setState ({
+            balance: resp.data
+          })
+          this.accountTBalance(this.state.balance);
+        })  
+      }
+    }
+
+  accountTBalance(){
+    var balance = this.state.balance.slice(-1).pop();
+    this.setState({tbalance:balance.t_balance});
+    return balance.t_balance;
+  }
     render(){
+        const t_balance = this.state.tbalance;
         return (
             <div className="AccountBodyLeft">
 
                 <div className="AccountBodyLeftTop">
                   <div>TOTAL CHECKING</div>
                   <div>
-                    <div className="ABLTamount">${this.props.login.profile.map(this.accountBalance)}</div>
+                    <div className="ABLTamount">{`$${t_balance}`}</div>
                     <div className="ABLTtext">Available balance</div>
                   </div>
                 </div>
@@ -43,8 +72,8 @@ class AccountBody extends Component {
     }
 }
 
-function mapStateToProps({login}){
-  return {login};
+function mapStateToProps({login,newUser}){
+  return {login,newUser};
 }
 
 var AccountBodyLeft  = connect(mapStateToProps)(AccountBody);
