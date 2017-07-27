@@ -9,19 +9,21 @@ class AccountBody2 extends Component {
     super(props);
 
     this.state = {
-      things: []
+      things: [],
+      tbalance:{}
     }
     // this.transactionInfo = this.transactionInfo.bind(this)
+    this.accountTBalance=this.accountTBalance.bind(this);
   }
 
-    accountBalance(data){
-      let balance = data.balance;
-      return balance;
-    }
-    accountNumber(data){
-      var account = data.account;
-      return account;
-    }
+    // accountBalance(data){
+    //   let balance = data.balance;
+    //   return balance;
+    // }
+    // accountNumber(data){
+    //   var account = data.account;
+    //   return account;
+    // }
 
     componentDidMount() {
 // console.log('er', this.props.newUser.length);
@@ -32,6 +34,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
             this.setState ({
                 things: resp.data
             })
+              this.accountTBalance(this.state.things);
           })
 
         } else {
@@ -40,11 +43,17 @@ const ROOT_URL = 'http://localhost:3007/transactions';
             this.setState ({
                 things: resp.data
             })
+              this.accountTBalance(this.state.things);
           })
 
         }
     }
 
+    accountTBalance(){
+    var balance = this.state.things.slice(-1).pop();
+    this.setState({tbalance:balance.t_balance});
+    return balance.t_balance;
+  }
 
     render(){
 
@@ -57,13 +66,16 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                       </tr>
                   );
 
+        const t_balance = this.state.tbalance;           
+        const acctNo=this.props.login.profile[0].account;
+
         return (
             <div className="AccountBodyRight">
 
               <div className="AccountBodyRightTop">
                 <div className="AccountBodyRightTopTop">
                   <div className="AccountBodyRightTopTop1">
-                    <div className="AccountBodyRightTopTop11">TOTAL CHECKING <span className="ABRTT11span">(...Number)</span>
+                    <div className="AccountBodyRightTopTop11">TOTAL CHECKING <span className="ABRTT11span">{acctNo}</span>
                     </div>
                     <a href="#" className="AccountBodyRightTopTop12">Things you can do</a>
                   </div>
@@ -72,7 +84,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                     <div>Debit card coverage</div>
                   </div>
                   <div className="AccountBodyRightTopTop22">
-                    <div>${this.props.login.profile.map(this.accountBalance)}</div>
+                    <div>{`$${t_balance}`}</div>
                     <div>Off</div>
                   </div>
                   <a href="#" className="AccountBodyRightTopTop3">Set up ></a>

@@ -3,8 +3,9 @@ import {Tabs, Tab} from 'material-ui/Tabs';
 import SwipeableViews from 'react-swipeable-views';
 import AccountBodyLeft from './AccountBodyLeft';
 import AccountBodyRight from './AccountBodyRight';
-import './AccountBodyMain.css';
 import Transaction from '../Transaction/Transaction';
+import {connect} from  'react-redux';
+import './AccountBodyMain.css';
 
 const styles = {
   headline: {
@@ -23,7 +24,7 @@ const styles = {
   }
 };
 
-export default class AccountBodyMain extends Component {
+class AccountBodyM extends Component {
 
     constructor(props) {
       super(props);
@@ -32,7 +33,7 @@ export default class AccountBodyMain extends Component {
       };
     }
 
-    handleChange = (value) => {
+    handleChange(value){
       this.setState({
         slideIndex: value,
       });
@@ -69,3 +70,10 @@ export default class AccountBodyMain extends Component {
         );
     }
 }
+
+function mapStateToProps({login, newUser}){
+  return {login, newUser};
+}
+
+var AccountBodyMain = connect(mapStateToProps)(AccountBodyM);
+export default AccountBodyMain;
