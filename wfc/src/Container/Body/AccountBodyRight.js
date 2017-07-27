@@ -49,12 +49,12 @@ const ROOT_URL = 'http://localhost:3007/transactions';
     render(){
 
       const transactionArray = this.state.things.map((e, i) =>
-                      <div key={i} className="AccountBodyRightBottomRepeat">
-                        <div>{e.date.substring(0,10)}</div>
-                        <div>{e.description}</div>
-                        <div>{e.amount}</div>
-                        <div>{e.t_balance}</div>
-                      </div>
+                      <tr key={i} className="AccountBodyRightBottomRepeat">
+                        <td>{e.date.substring(0,10)}</td>
+                        <td>{e.description}</td>
+                        <td>{e.amount}</td>
+                        <td>{e.t_balance}</td>
+                      </tr>
                   );
 
         return (
@@ -65,7 +65,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                   <div className="AccountBodyRightTopTop1">
                     <div className="AccountBodyRightTopTop11">TOTAL CHECKING <span className="ABRTT11span">(...Number)</span>
                     </div>
-                    <div className="AccountBodyRightTopTop12">Things you can do</div>
+                    <a href="#" className="AccountBodyRightTopTop12">Things you can do</a>
                   </div>
                   <div className="AccountBodyRightTopTop2">
                     <div>Present balance</div>
@@ -75,19 +75,19 @@ const ROOT_URL = 'http://localhost:3007/transactions';
                     <div>${this.props.login.profile.map(this.accountBalance)}</div>
                     <div>Off</div>
                   </div>
-                  <div className="AccountBodyRightTopTop3">Set up ></div>
+                  <a href="#" className="AccountBodyRightTopTop3">Set up ></a>
                 </div>
                 <div className="AccountBodyRightTopMid">
-                  <div>Statements</div>
-                  <div>Paperless</div>
-                  <div>Transfer money</div>
+                  <button href="#">Statements</button>
+                  <button href="#">Paperless</button>
+                  <button href="#">Transfer money</button>
                 </div>
                 <div className="AccountBodyRightTopBottom">
                     <img className="ABRTBimage" src={ sales_agent } />
                     <div>
                       <div className="ABRTBtitle">Let's Find the Right Mortgage For You</div>
                       <div>Our home lending experts are here to help you find the best options.</div>
-                      <div className="ABRTBbottom">Learn More > </div>
+                      <a href="#" className="ABRTBbottom">Learn More > </a>
                     </div>
                 </div>
               </div>
@@ -95,24 +95,22 @@ const ROOT_URL = 'http://localhost:3007/transactions';
               <div className="AccountBodyRightMid">
                 <div className="AccountBodyRightMidLeft">
                   <div className="AccountBodyRightMidLeftTrans">All Transactions</div>
-                  <div className="ABRMLsearch">Search > </div>
+                  <a href="#" className="ABRMLsearch">Search > </a>
                 </div>
                 <div className="AccountBodyRightMidRight">
-                  <div>Print</div>
+                  <a href="#">Print</a>
                 </div>
               </div>
 
-              <div className="AccountBodyRightBottom">
-                <div className="AccountBodyRightBottomHead">
-                    <div className="ABRBHdate">Date</div>
-                    <div className="ABRBHdesc">Description</div>
-                    <div className="ABRBHamount">Amount</div>
-                    <div className="ABRBHbal">Balance</div>
-                </div>
-                <div>
+              <table className="AccountBodyRightBottom">
+                <tr className="AccountBodyRightBottomHead">
+                    <th className="ABRBH date">Date</th>
+                    <th className="ABRBH desc">Description</th>
+                    <th className="ABRBH amount">Amount</th>
+                    <th className="ABRBH bal">Balance</th>
+                </tr>
                     {transactionArray}
-                </div>
-              </div>
+              </table>
             </div>
         );
     }

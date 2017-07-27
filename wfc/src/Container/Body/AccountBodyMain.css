@@ -81,6 +81,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 1%; }
+  
 
 .AccountBodyRightTop {
   height: 50%;
@@ -229,26 +230,24 @@
   background: white; }
 
 .AccountBodyRightBottomHead {
-  display: flex;
-  border-bottom: 1px solid grey;
-  justify-content: space-around;
-  color: grey; }
-
-.ABRBHdate {
-  margin-left: 4%; }
-
-.ABRBHdesc {
-  margin-left: 5%; }
-
-.ABRBHamount {
-  margin-left: 5%; }
-
-.ABRBHbal {
-  margin-right: 1%; }
+  color: grey;
+  }
 
 .AccountBodyRightBottomRepeat {
-  display: flex;
-  justify-content: space-around;
-  margin: 2%; }
+  line-height: 3em !important;
+  border-left: 65px solid transparent !important;  }
+
+
+  tr:nth-child(even) {
+    background-color: #096df7;
+    color: white;
+}
+tr:nth-child(odd) {
+  font-weight: 900 !important;
+}
+
+.slider-tab {
+  background-color: #096df7 !important; }
+
 
 /* RIGHT end */
