@@ -31,6 +31,7 @@ class AccountBodyM extends Component {
       this.state = {
         slideIndex: 0,
       };
+      this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(value){
