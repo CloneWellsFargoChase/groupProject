@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 .newsWrapper {
-  width: 100vw;
+  margin-top: 3em;
+  width: 102vw;
   background-color: #F3F0E9;
   display: flex;
   justify-content: center;
   align-items: center; }
+  .all-news{
+    width: 80%;
+    margin: 0 auto;
+  }
 
 #newsTitle {
   background: #F3F0E9;
   height: 75px;
   width: 100vw;
-  margin: 2.2%; }
+  /*margin: 2.2%;*/
+   }
   #newsTitle p {
     font-size: 3.125em;
     font-family: 'Open Sans', sans-serif;
@@ -18,7 +24,7 @@
 
 .newsContainer {
   background: #F3F0E9;
-  width: 102vw;
+  /*width: 102vw;*/
   height: 1000px;
   display: flex;
   justify-content: space-between;
