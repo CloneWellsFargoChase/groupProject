@@ -18,9 +18,10 @@ const styles = {
   paperwidth: {
     borderRadius:'25px',
     textAlign:'center',
-    width: '80%',
-    height:'370px',
-    marginTop:'60px',
+    width: '90%',
+    height:'310px',
+    marginTop:'130px',
+    marginLeft:'60px'
   },
   textfield:{
     textAlign:'center',
