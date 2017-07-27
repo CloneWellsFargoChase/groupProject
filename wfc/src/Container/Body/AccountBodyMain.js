@@ -62,7 +62,7 @@ export default class AccountBodyMain extends Component {
                   </div>
                 </div>
                 <div style={styles.txslide} className="tx-div">
-                  <Transaction/>
+                  <Transaction handleChange={this.handleChange}/>
                 </div>
                </SwipeableViews>
             </div>

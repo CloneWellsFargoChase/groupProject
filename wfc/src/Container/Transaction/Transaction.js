@@ -19,7 +19,7 @@ const styles = {
     borderRadius:'25px',
     textAlign:'center',
     width: '80%',
-    height:'300px',
+    height:'370px',
     marginTop:'60px',
   },
   textfield:{
@@ -27,7 +27,7 @@ const styles = {
       marginRight:'30px'
   },
   textFieldMemo:{
-      width:'40%',
+      width:'50%',
       textAlign: 'center'
   }
 };
@@ -92,6 +92,8 @@ this.transactionSubmit = this.transactionSubmit.bind(this);
         memo: this.state.memo
       });
     console.log(this.state);
+
+    this.props.handleChange(0);
   }
 
     render() {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import bg from '../../Images/Icons/bg.jpg';
+import bg from '../../Images/mountains-bg.jpg';
 import './Jumbotron.css';
 import UserLoginContainer from '../userLogin/LoginComponent';
 import {Link} from 'react-router-dom';

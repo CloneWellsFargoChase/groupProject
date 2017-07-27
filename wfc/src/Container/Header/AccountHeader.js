@@ -38,20 +38,20 @@ class HeadAccount extends Component {
               <div className="AccountHeaderUpper">
                 <div className="AccountHeaderUpperLeft">
 
-                  <a href="#"><img className="account-header-icon" src={hamburger} alt="menu"/></a>
-                  <a href="#"><img className="account-header-icon" src={comment} alt="comment"/></a>
-                  <a href="#"><img className="account-header-icon" src={flag} alt="flag"/></a>
+                  <a href="#"><img className="account-header-icon hamburger" src={hamburger} alt="menu"/></a>
+                  <a href="#"><img className="account-header-icon comment" src={comment} alt="comment"/></a>
+                  <a href="#"><img className="account-header-icon flag" src={flag} alt="flag"/></a>
 
                   {this.props.login.profile.map(this.userName)}
                 </div>
                 <div className="AccountHeaderUpperCenter">
                   
-                    <a href="/"><img className="account-header-icon" src={chaseL} /></a>
+                    <a href="/"><img className="account-header-icon logo" src={chaseL} /></a>
                 </div>
                 <div className="AccountHeaderUpperRight">
 
-                    <a href="#"><img className="account-header-icon" src={magnify} alt="search"/></a>
-                    <a href="#"> <img className="account-header-icon" src={user} alt="user"/></a>
+                    <a href="#"><img className="account-header-icon magnify" src={magnify} alt="search"/></a>
+                    <a href="#"> <img className="account-header-icon user" src={user} alt="user"/></a>
                     <button className="sign-out-tab" type="submit" onClick={this.onLogout}>Sign out</button>
                 </div>
               </div>

@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
+* {
+  font-family: 'Open Sans', sans-serif !important; }
+
+.slider-title h1 {
+  display: flex;
+  justify-content: center;
+  font-weight: 100 !important;
+  margin-top: 3em; }
+
 .slick-slider {
-  margin-top: 6em;
-  width: 80%;
-  padding-left: 5em;
-  margin-left: 12.5em; }
+  width: 78%;
+  margin: 0 auto; }
 
 .slick-slide > img {
   padding-left: 0.5em;
@@ -22,3 +29,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 24px; }
+
+.slick-dots li button:before {
+  color: #0664b9 !important;
+  font-size: 17px !important; }
