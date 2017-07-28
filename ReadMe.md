@@ -30,9 +30,8 @@ Christopher <br />
 
 Author 2 <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
--Portfolio site: http://portfolio.myefficient1.com/
+-Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
 
-<br />
 Author 3 <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
@@ -40,7 +39,7 @@ Author 3 <br />
 
 Author 4 <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
--Portfolio site: http://portfolio.myefficient1.com/ <br />
+-Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
 
 **Images**
 <br />
