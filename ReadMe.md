@@ -50,10 +50,10 @@ Author 4 <br />
 ![screen shot 2017-07-28 at 10 03 44 am](https://user-images.githubusercontent.com/24628445/28730509-b5af27f2-738d-11e7-8951-828a0cd9ff92.png)
 <br />
 <br />
-![screen shot 2017-07-28 at 10 03 35 am](https://user-images.githubusercontent.com/24628445/28730512-b5c84dfe-738d-11e7-90d9-984d41daeb7a.png)
-<br />
-<br />
 ![screen shot 2017-07-28 at 10 03 27 am](https://user-images.githubusercontent.com/24628445/28730510-b5c4add4-738d-11e7-9694-bff71c99b41f.png)
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 35 am](https://user-images.githubusercontent.com/24628445/28730512-b5c84dfe-738d-11e7-90d9-984d41daeb7a.png)
 <br />
 <br />
 ![screen shot 2017-07-28 at 10 03 53 am](https://user-images.githubusercontent.com/24628445/28730511-b5c4a262-738d-11e7-8b15-f4e82f41eff4.png)
