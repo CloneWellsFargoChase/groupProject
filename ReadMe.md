@@ -29,16 +29,16 @@ Christopher <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/
 
-Author 2 <br />
+Joshua <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
 
-Author 3 <br />
+Chase <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
 
 
-Author 4 <br />
+Shon <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/ <br /> <br />
 
