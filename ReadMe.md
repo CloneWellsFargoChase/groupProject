@@ -13,7 +13,7 @@
 
 **Front End Highlights**
 <br />
--For front end styling we relied mainly on flex and also utalized SCSS. We also used css animations for the dropdown menu on the front page and javascript for the slider on the same page. We also used positioning for the accounts page.
+-For front end styling we relied mainly on flex and also utalized SCSS. We also used css animations for the dropdown menu on the front page and javascript for the slider on the same page. We also used positioning for the accounts page. <br />
 -We mainly used Redux for data flow but we occationally moved data via basic React props. Axios helped us connect to our back end.
 <br />
 
