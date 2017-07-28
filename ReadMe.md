@@ -1,4 +1,4 @@
-**Recipe Website**
+**Chase Clone Website**
 <br />
 -This is a full stack clone of the Chase Bank website. It allows you to create a new account, login, transfer money, and reset your password.
         
@@ -19,7 +19,8 @@
 
 **Back End Highlights**
 <br />
--We used customized algorithms on the back end to handle login, transfering money, resetting passwords, creating new users, and viewing account data. We also created middleware to secure our site against repeated requests over a certain number from an IP. Nodemailer was integrated in order to assist with resetting the password and welcoming new users. The database was also indexed in order to speed up the process of responding to get requests for transactions in the future. The site enjoys full CRUD capabilities.
+-We used customized algorithms on the back end to handle login, transfering money, resetting passwords, creating new users, and viewing account data. <br />
+-We also created middleware to secure our site against repeated requests over a certain number from an IP. Nodemailer was integrated in order to assist with resetting the password and welcoming new users. The database was also indexed in order to speed up the process of responding to get requests for transactions in the future. The site enjoys full CRUD capabilities.
 <br />
       
 **Authors**
@@ -43,17 +44,18 @@ Author 4 <br />
 
 **Images**
 <br />
--Landing Page is first, Specific recipe is second, kitchen is third.
+-Here are a few snapshots from our project.
 <br />
 <br />
 ![screen shot 2017-07-28 at 10 03 44 am](https://user-images.githubusercontent.com/24628445/28730509-b5af27f2-738d-11e7-8951-828a0cd9ff92.png)
-<br />
-<br />
-![screen shot 2017-07-28 at 10 03 53 am](https://user-images.githubusercontent.com/24628445/28730511-b5c4a262-738d-11e7-8b15-f4e82f41eff4.png)
 <br />
 <br />
 ![screen shot 2017-07-28 at 10 03 35 am](https://user-images.githubusercontent.com/24628445/28730512-b5c84dfe-738d-11e7-90d9-984d41daeb7a.png)
 <br />
 <br />
 ![screen shot 2017-07-28 at 10 03 27 am](https://user-images.githubusercontent.com/24628445/28730510-b5c4add4-738d-11e7-9694-bff71c99b41f.png)
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 53 am](https://user-images.githubusercontent.com/24628445/28730511-b5c4a262-738d-11e7-8b15-f4e82f41eff4.png)
+<br />
 <br />
