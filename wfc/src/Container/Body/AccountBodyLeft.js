@@ -22,6 +22,7 @@ class AccountBody extends Component {
         this.setState ({
           balance: resp.data
         })
+          console.log('25', this.state.balance)
         this.accountTBalance(this.state.balance);
       })
     }
@@ -30,6 +31,7 @@ class AccountBody extends Component {
             this.setState ({
             balance: resp.data
           })
+            console.log('34', this.state.balance)
           this.accountTBalance(this.state.balance);
         })  
       }

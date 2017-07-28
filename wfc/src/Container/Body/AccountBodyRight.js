@@ -34,6 +34,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
             this.setState ({
                 things: resp.data
             })
+            console.log('37', this.state.things)
               this.accountTBalance(this.state.things);
           })
 
@@ -43,6 +44,7 @@ const ROOT_URL = 'http://localhost:3007/transactions';
             this.setState ({
                 things: resp.data
             })
+            console.log('46', this.state.things)
               this.accountTBalance(this.state.things);
           })
 

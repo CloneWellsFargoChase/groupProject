@@ -5,7 +5,7 @@ class News extends Component {
     render() {
         return (
             <div className='newsWrapper'>
-                <div>
+                <div className="all-news">
                     <div id='newsTitle'><p>News &amp; Stories</p></div>
                     <div className='newsContainer'>
                         <div className='picTextContainer'>

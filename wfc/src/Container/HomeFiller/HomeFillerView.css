@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-.filler {
+.filler-wrapper{
   width: 100vw;
+  margin-top: 3em;
+}
+.filler {
+  width: 80%;
+  margin: 0 auto;
   border-top: 1px solid lightgrey;
   font-family: 'Open Sans', sans-serif;
   display: flex;

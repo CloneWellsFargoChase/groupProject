@@ -4,7 +4,7 @@ import './HomeFillerView.css'
 class Filler extends Component {
     render() {
         return (
-            <div>
+            <div className="filler-wrapper">
                 <div className='filler'>
                     <div className='pictureContainer'>
                         <img alt='Boy and teddy in car' src={require('../../Images/BoyAndTeddy.jpg')}/>
