@@ -43,6 +43,7 @@ Author 4 <br />
 -Linkedin: https://www.linkedin.com/in/christopherv/ <br />
 -Portfolio site: http://portfolio.myefficient1.com/
 
+<br />
 **Images**
 <br />
 -Landing Page is first, Specific recipe is second, kitchen is third.
