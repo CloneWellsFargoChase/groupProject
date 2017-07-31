@@ -71,6 +71,5 @@ Chase <br />
 -Linkedin: https://www.linkedin.com/in/chase-pettyjohn/ <br />
 -Portfolio site: tchasepettyjohn.wixsite.com/hello <br /> <br />
 
-
 Shon <br />
 -Linkedin: https://www.linkedin.com/in/pxdas/ <br /> <br />
