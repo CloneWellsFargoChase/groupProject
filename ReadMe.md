@@ -73,5 +73,3 @@ Chase <br />
 
 Shon <br />
 -Linkedin: https://www.linkedin.com/in/pxdas/ <br /> 
-
-<br />
