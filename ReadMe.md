@@ -45,12 +45,16 @@ This image section was build with CSS using Flex. It is responsive.
 This is the new customer page that allows you to create a new account. This endpoint checks to see if your password and username meet certain qualifications. If it does (like uniquness for the username and complexity for both) you will be redirected to the account page and you can then see your information.
 <br />
 <br />
-![screen shot 2017-07-28 at 10 03 53 am](https://user-images.githubusercontent.com/24628445/28730511-b5c4a262-738d-11e7-8b15-f4e82f41eff4.png) <br />
+![account](https://user-images.githubusercontent.com/24628445/28782444-56000b34-75ca-11e7-95ff-028d6bff38ca.png) <br />
 This image shows the accounts page. On the left you can see the total balance in your account and a customized ad. On the top you can see your logged in name along with other navigation symbols. You can also switch between the main account page and the transfer page. On the right side you will again see your balance and the account number you have been assigned. On the right and towards the bottom you can see the recent transactions listed for that account. All of the data for this page comes from the database and is served as soon as the user is logged in. Both the login and new customer endpoints run the data through the login function (which is responsible for sending the data to the front end on success).
 <br />
 <br />
 ![screen shot 2017-07-28 at 6 54 15 pm](https://user-images.githubusercontent.com/24628445/28740766-51d67ad0-73c6-11e7-99fd-9333309e2777.png) <br />
-This final image shows the transfer page. You can transfer from one account to another as long as you meet certain qualifications. The backend will update both accounts according to your transfer amount. It will also alert you before you submit the transaction. If you visit the account page after the transfer you will see the result.
+This image shows the transfer page. You can transfer from one account to another as long as you meet certain qualifications. The backend will update both accounts according to your transfer amount. It will also alert you before you submit the transaction. If you visit the account page after the transfer you will see the result.
+<br />
+<br />
+![screen shot 2017-07-31 at 8 26 04 am](https://user-images.githubusercontent.com/24628445/28782422-47138f6a-75ca-11e7-98a8-63532558c153.png) <br />
+This is the welcome email for people who set up new accounts. It is sent after all of the information is verified and the new account is set up. The back end will simultaniously send a welcome email and log in the person to the account page where they can view their information.
 <br />
 <br />
 **Authors**
