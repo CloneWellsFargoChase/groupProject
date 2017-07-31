@@ -65,11 +65,13 @@ Christopher <br />
 
 Josh <br />
 -Linkedin: https://www.linkedin.com/in/joshuawilcken/ <br />
--Portfolio site: http://joshwilcken.wixsite.com/portfolio/ <br /> <br />
+-Portfolio site: http://joshwilcken.wixsite.com/portfolio/ <br />
 
 Chase <br />
 -Linkedin: https://www.linkedin.com/in/chase-pettyjohn/ <br />
--Portfolio site: tchasepettyjohn.wixsite.com/hello <br /> <br />
+-Portfolio site: http://tchasepettyjohn.wixsite.com/hello <br />
 
 Shon <br />
--Linkedin: https://www.linkedin.com/in/pxdas/ <br /> <br />
+-Linkedin: https://www.linkedin.com/in/pxdas/ <br /> 
+
+<br />
