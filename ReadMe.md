@@ -1,4 +1,4 @@
-**Chase Clone Website**
+**ChaseFargo Website Clone**
 <br />
 -This is a full stack clone of the Chase Bank website. It allows you to create a new account, login, transfer money, and reset your password.
         
