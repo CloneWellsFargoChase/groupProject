@@ -27,7 +27,7 @@ class AccountBody2 extends Component {
 
     componentDidMount() {
 // console.log('er', this.props.newUser.length);
-const ROOT_URL = 'http://localhost:3007/transactions';
+const ROOT_URL = '/transactions';
         if(this.props.newUser.length){
 
           axios.get(`${ROOT_URL}?id=${this.props.newUser[0].id}`).then((resp) => {

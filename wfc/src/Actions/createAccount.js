@@ -6,7 +6,7 @@ export const NEW_USER = 'NEW_USER';
 
 export function createAccount(data){
   console.log('8cA', data);
-    const request = axios.post(ROOT_URL,{
+    const request = axios.post('/newUser',{
         firstName: data.firstName,
         lastName: data.lastName,
         userName: data.userName,
