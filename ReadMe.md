@@ -1,73 +1,75 @@
-# groupProject
+**ChaseFargo Website Clone**
+<br />
+-This is a full stack clone of the Chase Bank website. It allows you to create a new account, login, transfer money, and reset your password.
+        
+**Installing**
+<br />
+-If you want to install this project just clone it to your machine and then "npm i". 
 
- GITHUB FLOW
+**Stack**
+<br />
+-React with Redux, Express, Node, PostgreSQL
+<br />
 
-1. From Master: Git Pull (this will bring in the latest code down)
-2. git checkout -b name the branch 
+**Front End Highlights**
+<br />
+-For front end styling we relied mainly on flex and also utalized SCSS. We also used css animations for the dropdown menu on the front page and javascript for the slider on the same page. We also used positioning for the accounts page. <br />
+-We mainly used Redux for data flow but we occationally moved data via basic React props. Axios helped us connect to our back end.
+<br />
 
-——————— once finished with feature ————————— 
-3. commit everything (git add/commit)
-4. git checkout master 
-5. git pull —> this checks whether master has been changed since create branch. 
-6. git checkout <feature branch> 
-7. git merge master 
-8. git push origin <feature branch> -u
-9. open pull request (tell mentor I've open pull request)
+**Back End Highlights**
+<br />
+-We used customized algorithms on the back end to handle login, transfering money, resetting passwords, creating new users, and viewing account data. <br />
+-We also created middleware to secure our site against repeated requests over a certain number from an IP. Nodemailer was integrated in order to assist with resetting the password and welcoming new users. The database was also indexed in order to speed up the process of responding to get requests for transactions in the future. The site enjoys full CRUD capabilities.
+<br />
+<br />
 
-git branch -d <feature branch> 
+**Images & Walkthrough**
+<br />
+-Here are a few snapshots from our project.
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 44 am](https://user-images.githubusercontent.com/24628445/28730509-b5af27f2-738d-11e7-8951-828a0cd9ff92.png) <br />
+The main landing page layout was done in flex. The menu drops down from the top and then reveals each icon sequentially thanks to CSS with transition animations. The slider below the main image rotates due to javascript. The top right has a square box that contains most of the interactive functionality for this page. You can create a new account, sign in, and reset your password from this box. Each of these is protected by brute force code that tracks the requesting IP and blocks them if they make too many requests in a certain period of time. The reset password and sign up sections use Node Mailer to communicate with customers who need to reset their account or get signup information.
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 27 am](https://user-images.githubusercontent.com/24628445/28730510-b5c4add4-738d-11e7-9694-bff71c99b41f.png) <br />
+This image section was build with CSS using Flex. It is responsive.
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 35 am](https://user-images.githubusercontent.com/24628445/28730512-b5c84dfe-738d-11e7-90d9-984d41daeb7a.png) <br />
+This image section was build with CSS using Flex. It is responsive.
+<br />
+<br />
+![screen shot 2017-07-28 at 10 03 53 am](https://user-images.githubusercontent.com/24628445/28730511-b5c4a262-738d-11e7-8b15-f4e82f41eff4.png) <br />
+This is the new customer page that allows you to create a new account. This endpoint checks to see if your password and username meet certain qualifications. If it does (like uniquness for the username and complexity for both) you will be redirected to the account page and you can then see your information.
+<br />
+<br />
+![account](https://user-images.githubusercontent.com/24628445/28782444-56000b34-75ca-11e7-95ff-028d6bff38ca.png) <br />
+This image shows the accounts page. On the left you can see the total balance in your account and a customized ad. On the top you can see your logged in name along with other navigation symbols. You can also switch between the main account page and the transfer page. On the right side you will again see your balance and the account number you have been assigned. On the right and towards the bottom you can see the recent transactions listed for that account. All of the data for this page comes from the database and is served as soon as the user is logged in. Both the login and new customer endpoints run the data through the login function (which is responsible for sending the data to the front end on success).
+<br />
+<br />
+![screen shot 2017-07-28 at 6 54 15 pm](https://user-images.githubusercontent.com/24628445/28740766-51d67ad0-73c6-11e7-99fd-9333309e2777.png) <br />
+This image shows the transfer page. You can transfer from one account to another as long as you meet certain qualifications. The backend will update both accounts according to your transfer amount. It will also alert you before you submit the transaction. If you visit the account page after the transfer you will see the result.
+<br />
+<br />
+![screen shot 2017-07-31 at 8 26 04 am](https://user-images.githubusercontent.com/24628445/28782422-47138f6a-75ca-11e7-98a8-63532558c153.png) <br />
+This is the welcome email for people who set up new accounts. It is sent after all of the information is verified and the new account is set up. The back end will simultaniously send a welcome email and log in the person to the account page where they can view their information.
+<br />
+<br />
+**Authors**
+<br />
+Christopher <br />
+-Linkedin: https://www.linkedin.com/in/christopherv/ <br />
+-Portfolio site: http://portfolio.myefficient1.com/
 
-——— fix merge conflict ———— 
-<<<<HEAD
+Josh <br />
+-Linkedin: https://www.linkedin.com/in/joshuawilcken/ <br />
+-Portfolio site: http://joshwilcken.wixsite.com/portfolio/ <br />
 
-this is will be my code 
+Chase <br />
+-Linkedin: https://www.linkedin.com/in/chase-pettyjohn/ <br />
+-Portfolio site: http://tchasepettyjohn.wixsite.com/hello <br />
 
->>>> master 
-
-this is there other coders 
-
-To Start Working On the Project
-
-1. Fork/Clone to your local drive/machine.. $git clone https://github.com/CloneWellsFargoChase/groupProject.git
-
-2. Create a new branch.. $git checkout -b <insert-name-here>
-
-3. Run 'npm install' to install all package dependencies.. $npm install
-
-4. Run 'npm start' to view in browser.. $npm start
-
-5. REBASE often!!!.. $git pull
-
-To Commit Changes Locally
-
-1. Run git status to check for local changes.. $git status 
-
-2. Add files to commit.. $git add .
-
-3. Commit changes to local directory with the following structure.. $git commit -m 'finished: insert-text-here'
-
-To Commit Changes To Github
-
-1. Run git remote -v to determine upstream name. Validate for exact match to the name and path below.. $git remote -v
- 
-   origin  https://github.com/CloneWellsFargoChase/groupProject.git (fetch)
- 
-   origin  https://github.com/CloneWellsFargoChase/groupProject.git (push)
-
-2. Run git push origin <your-branch-name>.. $git push origin test-branch
-
-3. Merge request to be approved by approver(Dallin).
-
-4. Delete your local branch and REBASE once merge has been approved.
-
-Rebasing
-
-1. Checkout to local master branch.. $git checkout master
-
-2. Rebase with remote master.. $git pull
-
-3. Switch to local branch.. $git checkout branch-name
-
-4. Merge local branch with master.. $git merge master
-
-Bugs/Defects/Errors
--- Please raise any issues/concerns/bugs in the issues tab --
+Shon <br />
+-Linkedin: https://www.linkedin.com/in/pxdas/ <br /> 
