@@ -35,7 +35,10 @@ app.use(cors());
 
 
 ////// DATABASE //////
-massive(process.env.connectionString).then(db => {
+// massive(process.env.connectionString).then(db => {
+//   app.set('db', db)
+// })
+massive(process.env.connectionString,{scripts:__dirname + '/db'}).then(db => {
   app.set('db', db)
 })
 
