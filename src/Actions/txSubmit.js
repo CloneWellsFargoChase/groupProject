@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = 'http://localhost:3007/transfer';
+const ROOT_URL = 'http://chase-clone.herokuapp.com:80/transfer';
 
 export const SEND_MONEY = 'SEND_MONEY';
 
