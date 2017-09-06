@@ -33,7 +33,7 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "node server.js | npm run build-css",
+    "start": "node server.js",
     "starts": "react-scripts start && npm run build-css",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
