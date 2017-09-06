@@ -8,7 +8,7 @@ export const LOGIN_ERROR = 'LOGIN_ERROR';
 export const LOG_OUT = 'LOG_OUT';
 
 export function userLogin(data){
-    const request = axios.post('/login',{
+    const request = axios.post(${ROOT_URL},{
         userName: data.username,
         password: data.password
     })
