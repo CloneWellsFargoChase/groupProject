@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = 'http://localhost:3007/newUser';
+const ROOT_URL = 'http://chase-clone.herokuapp.com:80/newUser';
 
 export const NEW_USER = 'NEW_USER';
 
