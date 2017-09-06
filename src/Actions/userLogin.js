@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = 'http://localhost:3007/login';
+const ROOT_URL = 'http://chase-clone.herokuapp.com:80/login';
 
 export const FETCH_PROFILE = 'FETCH_PROFILE';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
